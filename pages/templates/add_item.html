@@ -1,0 +1,18 @@
+{% extends 'pages_father.html' %}
+{% load static %}
+{% block changeblock2 %}
+
+<h3>Add Course Here</h3>
+<!--carga de form-->
+{% if myForm.errors %}
+<p>ERROR</p>
+{% endif %}
+<form action="" method="POST" class="form-container_inner" enctype="multipart/form-data">{% csrf_token %}
+  <table class="table table-hover table-dark">
+    {{myForm.as_table}}
+  </table>
+  <input type="submit" class="btn btn-success" value="Send">
+</form>
+<h4>or search for courses</h4>
+
+{% endblock %}
