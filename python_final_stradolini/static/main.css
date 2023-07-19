@@ -12032,6 +12032,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.navbar .container-fluid .navbar-toggler .navbar-toggler-icon, .navbar .container-sm .navbar-toggler .navbar-toggler-icon, .navbar .container-md .navbar-toggler .navbar-toggler-icon, .navbar .container-lg .navbar-toggler .navbar-toggler-icon, .navbar .container-xl .navbar-toggler .navbar-toggler-icon, .navbar .container-xxl .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 .navbar .container-fluid .nav-item-imgc, .navbar .container-sm .nav-item-imgc, .navbar .container-md .nav-item-imgc, .navbar .container-lg .nav-item-imgc, .navbar .container-xl .nav-item-imgc, .navbar .container-xxl .nav-item-imgc {
   display: flex !important;
   height: 50px;
