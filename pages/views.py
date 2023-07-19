@@ -22,7 +22,7 @@ def add_p(request):
             inf = myForm.cleaned_data
             item = Item(item_name = inf['item_name'], item_created = inf['item_created'],item_price = inf['item_price'],item_description = inf['item_description'],item_genre = inf['item_genre'], item_material = inf['item_material'], item_image = inf['item_image'], item_stock = inf['item_stock'] )
             item.save()
-        return render(request, 'pages_home.html', {'myText':f'se ha creado el item {item.item_material}, {item.item_image}, {item.item_genre}'})
+        return render(request, 'pages_home.html', {'myText':f'{myForm.as_p()}'})
     else:
         myForm = ItemForm()
     return render(request, 'add_item.html', {'myForm': myForm})

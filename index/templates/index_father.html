@@ -11,10 +11,12 @@
   <!--bs js-->
   <script defer src="{% static 'bootstrap.bundle.min.js' %}"></script>
   <link rel="icon" type="image/png" href="{% static 'imgs/favicon.png' %}">
+  <!--fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,10 +46,8 @@
         </ul>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 cta-container">
           <button class="cta">
-            <span class="cta-span">
-              <a class="nav-link cta-a_login" href="{% url 'account_home' %}">Login /signup</a>
-            </span>
-            <span>
+            <a class="cta_link1" href="{% url 'login' %}">login |</a>
+            <a class="cta_link2" href="{% url 'signup' %}">signup</a>
           </button>
         </ul>
       </div>
