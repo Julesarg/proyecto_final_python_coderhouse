@@ -36,7 +36,7 @@
     </div>
   </div>
 
-  <div id='myDiv' class="animate__animated animate__fadeIn animate-bottom">
+  <div id='myDiv' class="animate__animated animate__fadeIn">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
@@ -78,48 +78,18 @@
     <!--contenido de las otras vistas-->
     {% endblock %}
     <footer class="footer-container">
+
+      <div class="footer-container_left">
+        <h3>SITEMAP?</h3>
+      </div>
+      <div class="footer-container_center">
+        <H3>CONTACT AND INFO?</H3>
+      </div>
+      <div class="footer-container_right">
+        <h3>REDES?</h3>
+      </div>
     </footer>
   </div>
 </body>
 
 </html>
-
-
-
-
-
-
-
-<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon text"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'index_home' %}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'pages_home' %}">Pages</a>
-        </li>
-        <div class="nav-item-imgc">
-          <img class="nav-item-imgc-img navbar-brand" src="{{STATIC_URL}}/static/imgs/pythonlogo.svg" alt="image">
-        </div>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'about' %}">About me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'admin_tools_home' %}">Administration</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Messages</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'account_home' %}">Login/Signup</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> -->

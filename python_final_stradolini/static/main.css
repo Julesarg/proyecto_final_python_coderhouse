@@ -12444,9 +12444,40 @@ textarea.form-control-lg {
 }
 
 .footer-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
   width: 100vw;
   height: 30vh;
-  background-color: red;
+}
+.footer-container .footer-container_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  height: 90%;
+  justify-content: center;
+  background-color: white;
+}
+.footer-container .footer-container_center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  height: 90%;
+  justify-content: center;
+  background-color: white;
+}
+.footer-container .footer-container_right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  height: 90%;
+  justify-content: center;
+  background-color: white;
 }
 
 html,
@@ -12458,8 +12489,8 @@ body {
   overflow-x: hidden;
   background-color: black;
 }
-html .animate-bottom,
-body .animate-bottom {
+html .animate__animated,
+body .animate__animated {
   position: relative;
   display: flex;
   flex-direction: column;
