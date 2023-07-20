@@ -10,52 +10,76 @@
   <link href="{% static 'main.css' %}" rel="stylesheet">
   <!--bs js-->
   <script defer src="{% static 'bootstrap.bundle.min.js' %}"></script>
+  <!--index loader js-->
+  <script defer src="{% static 'loader.js' %}"></script>
+  <!--animate.css animation-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!--favicon-->
   <link rel="icon" type="image/png" href="{% static 'imgs/favicon.png' %}">
   <!--fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="nav-item-imgc">
-        <img class="nav-item-imgc-img" src="{{STATIC_URL}}/static/imgs/pythonlogo.svg" alt="image">
-        <p class='nav-item-imgc-text navbar-brand'>pending site name</p>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item nav-item-button">
-            <a class="nav-link active" aria-current="page" href="{% url 'index_home' %}">Home</a>
-          </li>
-          <li class="nav-item nav-item-button">
-            <a class="nav-link" href="{% url 'pages_home' %}">Gallery</a>
-          </li>
-          <li class="nav-item nav-item-button">
-            <a class="nav-link" href="{% url 'about' %}">About me</a>
-          </li>
-          <li class="nav-item nav-item-button">
-            <a class="nav-link" href="{% url 'admin_tools_home' %}">Administration</a>
-          </li>
-          <li class="nav-item nav-item-button">
-            <a class="nav-link" href="#">Messages</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 cta-container">
-          <button class="cta">
-            <a class="cta_link1" href="{% url 'login' %}">login |</a>
-            <a class="cta_link2" href="{% url 'signup' %}">signup</a>
-          </button>
-        </ul>
+<body onload="executeLoader()">
+
+  <div class="spinnerContainer" id="loader">
+    <div class="spinner"></div>
+    <div class="loader">
+      <p>loading</p>
+      <div class="words">
+        <span class="word">...</span>
+        <span class="word">Website</span>
+        <span class="word">Resources</span>
+        <span class="word">Images</span>
+        <span class="word">Other cool stuff</span>
       </div>
     </div>
-  </nav>
-  {% block changeblock %}
-  <!--contenido de las otras vistas-->
-  {% endblock %}
+  </div>
+
+  <div id='myDiv' class="animate__animated animate__fadeIn animate-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="nav-item-imgc">
+          <img class="nav-item-imgc-img" src="{{STATIC_URL}}/static/imgs/pythonlogo.svg" alt="image">
+          <p class='nav-item-imgc-text navbar-brand'>pending site name</p>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item nav-item-button">
+              <a class="nav-link active" aria-current="page" href="{% url 'index_home' %}">Home</a>
+            </li>
+            <li class="nav-item nav-item-button">
+              <a class="nav-link" href="{% url 'pages_home' %}">Gallery</a>
+            </li>
+            <li class="nav-item nav-item-button">
+              <a class="nav-link" href="{% url 'about' %}">About me</a>
+            </li>
+            <li class="nav-item nav-item-button">
+              <a class="nav-link" href="{% url 'admin_tools_home' %}">Administration</a>
+            </li>
+            <li class="nav-item nav-item-button">
+              <a class="nav-link" href="#">Messages</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 cta-container">
+            <button class="cta">
+              <a class="cta_link1" href="{% url 'login' %}">login |</a>
+              <a class="cta_link2" href="{% url 'signup' %}">signup</a>
+            </button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% block changeblock %}
+    <!--contenido de las otras vistas-->
+    {% endblock %}
+    <footer class="footer-container">
+    </footer>
+  </div>
 </body>
 
 </html>
