@@ -1,0 +1,145 @@
+//BARRA DE MENU//
+.header {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  .navbar {
+    .container-fluid {
+      .navbar-toggler {
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+      }
+      .nav-item-imgc {
+        display: flex !important;
+        height: 50px;
+        justify-content: flex-start;
+        align-items: center;
+        .nav-item-imgc-img {
+          width: auto;
+          height: 100%;
+        }
+        .nav-item-imgc-text {
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.5rem;
+          font-weight: 500;
+          margin: 0 10px 0 10px;
+          color: rgb(255, 255, 255, 0.6);
+          user-select: none !important;
+        }
+      }
+      .navbar-collapse {
+        background-color: transparent;
+        flex-grow: 0;
+        width: 70%;
+        justify-content: space-between;
+        align-items: center;
+        .navbar-nav {
+          margin-right: 0 !important;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          .nav-item {
+            a {
+              color: rgb(255, 255, 255, 0.7);
+              padding: 0 0 0 0;
+            }
+            a:hover {
+              color: white;
+            }
+            .navbar-brand {
+              margin: 0;
+              padding: 0;
+            }
+          }
+          /* button modif */
+          .nav-item-button {
+            margin: 0 10px 0 10px;
+            color: rgba(0, 0, 0, 0.6) !important;
+            box-shadow: none !important;
+            font-size: 16px;
+            color: #e1e1e1 !important;
+            font-weight: 400;
+            cursor: pointer;
+            position: relative;
+            border: none;
+            background: none;
+            text-transform: uppercase;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 400ms;
+            transition-property: color;
+            font-family: "Poppins", sans-serif;
+          }
+          .nav-item-button:focus,
+          .nav-item-button:hover {
+            color: #fff;
+          }
+          .nav-item-button:focus:after,
+          .nav-item-button:hover:after {
+            width: 100%;
+            left: 0%;
+          }
+          .nav-item-button:after {
+            content: "";
+            pointer-events: none;
+            bottom: -2px;
+            left: 50%;
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: #fff;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 400ms;
+            transition-property: width, left;
+          }
+        }
+        .cta-container {
+          width: 150px;
+          //login button//
+          .cta {
+            border: none;
+            background: none;
+            .cta_link1 {
+              text-decoration: none;
+              color: rgb(255, 255, 255, 0.7);
+              font-weight: 400;
+              font-family: "Poppins", sans-serif;
+              font-size: 16px;
+            }
+            .cta_link1:hover {
+              color: white;
+            }
+            .cta_link2 {
+              text-decoration: none;
+              color: rgb(255, 255, 255, 0.7);
+              font-weight: 400;
+              font-family: "Poppins", sans-serif;
+              font-size: 16px;
+            }
+            .cta_link2:hover {
+              color: white;
+            }
+          }
+          .cta::before {
+            margin-left: auto;
+          }
+          .cta::after,
+          .cta::before {
+            content: "";
+            width: 0%;
+            height: 1px;
+            background: white;
+            display: block;
+            transition: 0.5s;
+          }
+
+          .cta:hover::after,
+          .cta:hover::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

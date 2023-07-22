@@ -1,11 +1,14 @@
 //bootstrap//
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "navbar";
-@import "index";
-@import "footer";
+@import "scss/navbar";
+@import "scss/index";
+@import "scss/footer";
 
 html,
 body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
   width: 100%;
   height: 100%;
   margin: 0px;

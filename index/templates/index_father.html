@@ -39,93 +39,119 @@
   </div>
 
   <div id='myDiv' class="animate__animated animate__fadeIn">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="nav-item-imgc">
-          <img class="nav-item-imgc-img" src="{{STATIC_URL}}/static/imgs/logo.png" alt="image">
-          <p class='nav-item-imgc-text navbar-brand'>The Vault</p>
+    <div class="header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="nav-item-imgc">
+            <img class="nav-item-imgc-img" src="{{STATIC_URL}}/static/imgs/logo.png" alt="image">
+            <p class='nav-item-imgc-text navbar-brand'>The Vault</p>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item nav-item-button">
+                <a class="nav-link active" aria-current="page" href="{% url 'index_home' %}">Home</a>
+              </li>
+              <li class="nav-item nav-item-button">
+                <a class="nav-link" href="{% url 'gallery_home' %}">Gallery</a>
+              </li>
+              <li class="nav-item nav-item-button">
+                <a class="nav-link" href="{% url 'about' %}">About me</a>
+              </li>
+              <li class="nav-item nav-item-button">
+                <a class="nav-link" href="{% url 'admin_tools_home' %}">Administration</a>
+              </li>
+              <li class="nav-item nav-item-button">
+                <a class="nav-link" href="#">Messages</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 cta-container">
+              <button class="cta">
+                <a class="cta_link1" href="{% url 'login' %}">login |</a>
+                <a class="cta_link2" href="{% url 'signup' %}">signup</a>
+              </button>
+            </ul>
+          </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item nav-item-button">
-              <a class="nav-link active" aria-current="page" href="{% url 'index_home' %}">Home</a>
-            </li>
-            <li class="nav-item nav-item-button">
-              <a class="nav-link" href="{% url 'pages_home' %}">Gallery</a>
-            </li>
-            <li class="nav-item nav-item-button">
-              <a class="nav-link" href="{% url 'about' %}">About me</a>
-            </li>
-            <li class="nav-item nav-item-button">
-              <a class="nav-link" href="{% url 'admin_tools_home' %}">Administration</a>
-            </li>
-            <li class="nav-item nav-item-button">
-              <a class="nav-link" href="#">Messages</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 cta-container">
-            <button class="cta">
-              <a class="cta_link1" href="{% url 'login' %}">login |</a>
-              <a class="cta_link2" href="{% url 'signup' %}">signup</a>
-            </button>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    {% block changeblock %}
-    <!--contenido de las otras vistas-->
-    {% endblock %}
-    <footer class="footer-container  d-flex flex-wrap">
+      </nav>
+    </div>
 
+    <div class="modifications-container">
+      {% block changeblock %}
+      <!--contenido de las otras vistas-->
+      {% endblock %}
+    </div>
+    <!--FOOTER-->
+    <footer class="footer-container  d-flex flex-wrap">
       <div class="footer-container_left">
         <div class="footer-container_left_h5">
           <h5>Sitemap</h5>
         </div>
         <div class="footer-container_left_down">
-
           <ul class="footer-container_main_list1">
-            <li class="footer-container_text">Home</li>
-            <li class="footer-container_text">Gallery</li>
+            <li class="footer-container_text"><a href="{% url 'index_home' %}">Home</a></li>
+            <li class="footer-container_text"><a href="{% url 'gallery_home' %}">Gallery</a></li>
             <ul>
-              <li>Paintings</li>
-              <li>Sculptures</li>
-              <li>Woodcraft</li>
-              <li>Digital Assets</li>
-              <li>Other craftings</li>
+              <li><a href="{% url 'paintings' %}">Paintings</a></li>
+              <li><a href="{% url 'sculptures' %}">Sculptures</a></li>
+              <li><a href="{% url 'woodcraft' %}">Woodcraft</a></li>
+              <li><a href="{% url 'digital_assets' %}">NFTs</a></li>
+              <li><a href="{% url 'other_craftings' %}">Others</a></li>
             </ul>
-            <li class="footer-container_text">About Us</li>
-            <li class="footer-container_text">My Profile</li>
           </ul>
-
           <ul class="footer-container_main_list2">
-            <li class="footer-container_text">No se</li>
-            <li class="footer-container_text">Adress</li>
-            <li class="footer-container_text">Telephone</li>
-            <li class="footer-container_text">Still on work</li>
+            <li class="footer-container_text"><a href="{% url 'about' %}">About Us</a></li>
+            <li class="footer-container_text"><a href="{% url 'profile' %}">My Profile</a></li>
           </ul>
-
         </div>
       </div>
-
       <div class="footer-container_center">
-        <!-- <H3>CONTACT AND INFO?</H3> -->
+        <div class="footer-container_center-down">
+          <img src="{{STATIC_URL}}/static/imgs/logoempty.png" alt="logobig">
+        </div>
       </div>
       <div class="footer-container_right">
-        <div class="footer-container_logos">
-          <img src="{{STATIC_URL}}/static/imgs/socialmedia/instagram.svg" alt="instagram">
+        <div class="footer-container_right_h5">
+          <h5>Contact</h5>
         </div>
-        <div class="footer-container_logos">
-          <img src="{{STATIC_URL}}/static/imgs/socialmedia/facebook.svg" alt="fecebook">
+        <div class="footer-container-right-down">
+          <div class="footer-container_logos">
+            <a href="http://www.instagram.com" target="_blank"><img
+                src="{{STATIC_URL}}/static/imgs/socialmedia/instagram.svg" alt="instagram"></a>
+          </div>
+          <div class="footer-container_logos">
+            <a href="http://www.facebook.com" target="_blank"><img
+                src="{{STATIC_URL}}/static/imgs/socialmedia/facebook.svg" alt="fecebook"></a>
+          </div>
+          <div class="footer-container_logos">
+            <a href="http://www.twitter.com" target="_blank"><img
+                src="{{STATIC_URL}}/static/imgs/socialmedia/twitter.svg" alt="twitter"></a>
+          </div>
+          <div class="footer-container_logos">
+            <a href="http://www.pinterest.com" target="_blank"><img
+                src="{{STATIC_URL}}/static/imgs/socialmedia/pinterest.svg" alt="pinterest"></a>
+          </div>
         </div>
-        <div class="footer-container_logos">
-          <img src="{{STATIC_URL}}/static/imgs/socialmedia/twitter.svg" alt="twitter">
+        <ul>
+          <li class="footer-container_text">+549 (011) 4443-5684</li>
+          <li class="footer-container_text">Calle Siempreviva 742, Springfield, CA</li>
+        </ul>
+      </div>
+      <div class="footer-last-container">
+        <div class="footer-last-container_left">
+          <p>Copyright © 2023 Julian Stradolini</p>
+          <p>All rights reserved</p>
         </div>
-        <div class="footer-container_logos">
-          <img src="{{STATIC_URL}}/static/imgs/socialmedia/pinterest.svg" alt="pinterest">
+        <div class="footer-last-container_right">
+          <p>
+            <a href="">Privacy Policy</a>
+          </p>
+          <p>
+            <a href="">Terms & Conditions</a>
+          </p>
         </div>
       </div>
     </footer>
