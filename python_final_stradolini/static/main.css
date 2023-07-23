@@ -12997,6 +12997,27 @@ textarea.form-control-lg {
     margin: 10px 0 0 0 !important;
   }
 }
+.modifications-container .main-container {
+  display: flex;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: center;
+}
+.modifications-container .main-container .form .container {
+  width: 80vw;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.modifications-container .main-container .form .container .form-row .inner-container-data {
+  display: flex;
+  width: 100%;
+}
+.modifications-container .main-container .form .container .form-row .inner-container-data .form-group {
+  color: #ffffff;
+  width: 100%;
+}
+
 html,
 body {
   display: flex;

@@ -1,0 +1,25 @@
+.modifications-container {
+  .main-container {
+    display: flex;
+    width: 100vw;
+    height: fit-content;
+    justify-content: center;
+    .form {
+      .container {
+        width: 80vw;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        .form-row {
+          .inner-container-data {
+            display: flex;
+            width: 100%;
+            .form-group {
+              color: #ffffff;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
