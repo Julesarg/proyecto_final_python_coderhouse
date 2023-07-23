@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'index',
     'gallery',
     'admin_tools',
-    'account'
+    'account',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,41 @@
+{% extends 'account_father.html' %}
+{% load static %}
+{% block changeblock4 %}
+
+<!-- {% if messages %}
+{% for message in messages %}
+<p> {{ message }} </p>
+{% endfor %}
+{% endif %} -->
+
+<div class="welcome-container">
+  <div class="welcome-container-top">
+    <p>Welcome to our site guest, we are happy you joined!</p>
+  </div>
+  <div class="welcome-container-bottom">
+    <p>What about getting started?</p>
+    <div class="welcome-container-bottom_buttons">
+      <button>
+        <a href="{% url 'gallery_home' %}">
+          Explore
+        </a>
+        <div class="arrow-wrapper">
+          <div class="arrow"></div>
+
+        </div>
+      </button>
+      <button>
+        <a href="{% url 'add_p' %}">
+          Add new Item
+        </a>
+        <div class="arrow-wrapper">
+          <div class="arrow"></div>
+
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
