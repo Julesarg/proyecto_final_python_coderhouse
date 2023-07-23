@@ -2,15 +2,13 @@
 {% load static %}
 {% block changeblock4 %}
 
-<!-- {% if messages %}
-{% for message in messages %}
-<p> {{ message }} </p>
-{% endfor %}
-{% endif %} -->
-
 <div class="welcome-container">
   <div class="welcome-container-top">
-    <p>Welcome to our site guest, we are happy you joined!</p>
+    {% if messages %}
+    {% for message in messages%}
+    <p>{{ message }}</p>
+    {% endfor %}
+    {% endif %}
   </div>
   <div class="welcome-container-bottom">
     <p>What about getting started?</p>
@@ -21,7 +19,6 @@
         </a>
         <div class="arrow-wrapper">
           <div class="arrow"></div>
-
         </div>
       </button>
       <button>
@@ -30,12 +27,9 @@
         </a>
         <div class="arrow-wrapper">
           <div class="arrow"></div>
-
         </div>
       </button>
     </div>
   </div>
 </div>
-
-
 {% endblock %}

@@ -1,5 +1,49 @@
 {% extends 'index_father.html' %}
 {% load static %}
 {% block changeblock %}
-<h1>BOUT ME VIEW / IN INDEX</h1>
+
+<div class="main-container">
+  <div class="main-container-left">
+    <div class="main-container-left-title">
+      <div class="main-container-left-title_up">
+        <p class="p1">Hi!</p>
+        <p class="p1 p2">I'm Julian</p>
+      </div>
+      <div class="main-container-left-title_down">
+        <p>FullStack Web Developer</p>
+        <p class="animation">
+          Hello World ... />
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="main-container-left-title_brief">
+      <p>
+        I'm happy to know you've passed by. I hope you have fun searching through this site.
+        If you want to look for more of my work, please send me a message, or take a peak on my GitHub.
+      </p>
+    </div>
+    <div class="main-container-left-buttons">
+      <button class="main-container-left-buttons_button"><a href="{% url 'message' %}">Message</a></button>
+      <button class="main-container-left-buttons_button"><a href="https://www.github.com/Julesarg"
+          target="_blank">Github</a></button>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="main-container-right">
+    <div class="main-container-right_img">
+      <img src="{{STATIC_URL}}/static/imgs/profile2.png" alt="profilepic">
+    </div>
+  </div>
+</div>
+
+
 {% endblock %}

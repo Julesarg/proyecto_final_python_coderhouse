@@ -5,3 +5,6 @@ def index_home(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def message(request):
+    return render(request, 'message.html')
