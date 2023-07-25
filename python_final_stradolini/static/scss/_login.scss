@@ -1,12 +1,12 @@
 .modifications-container {
-  .main-container-signup {
+  .main-container-login {
     display: flex;
     width: 100vw;
     height: fit-content;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 75px 0 0 0;
+    margin: 200px 0 200px 0;
     .form {
       background-color: black;
       border-radius: 20px;
@@ -78,40 +78,6 @@
           }
         }
       }
-      //radio options
-      .form-radio {
-        flex-direction: column;
-        margin-bottom: 20px;
-        label {
-          color: white;
-          margin: 0 0 5px 0;
-        }
-        .form-check {
-          display: flex;
-          flex-direction: column;
-          background-color: rgba(21, 21, 21, 0.8);
-          border-radius: 12px;
-          border: 0;
-          color: #eee;
-          font-size: 18px;
-          height: 100%;
-          outline: 0;
-          padding: 5px 0 5px 40px;
-          margin: 0 0 0 0;
-          .form-check-label {
-            color: rgba(255, 255, 255, 0.788);
-            .form-check-input {
-            }
-            .form-check-input:checked {
-              background-color: rgba(207, 0, 114, 0.7);
-              border-color: rgba(207, 0, 114, 0.7);
-            }
-            .form-check-input:focus {
-              box-shadow: none;
-            }
-          }
-        }
-      }
       .button {
         background: #000000;
         border: solid rgba(207, 0, 114, 0.9);
@@ -124,12 +90,10 @@
         cursor: pointer;
         transform: skew(-21deg);
       }
-
       span {
         display: inline-block;
         transform: skew(21deg);
       }
-
       .button::before {
         content: "";
         position: absolute;
@@ -142,11 +106,9 @@
         z-index: -1;
         transition: all 0.5s;
       }
-
       .button:hover {
         color: #fff;
       }
-
       .button:hover::before {
         left: 0;
         right: 0;
