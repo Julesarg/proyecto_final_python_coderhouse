@@ -1,7 +1,72 @@
 {% extends 'gallery_father.html' %}
 {% load static %}
 {% block changeblock2 %}
-<h1>MAIN gallery VIEW</h1>
+
+
+<div class="main-container-gallery">
+  <div class="main-container-gallery-textc">
+    <p class="main-container-gallery_text">Choose your genre</p>
+  </div>
+  <section class="section-container">
+    <ul>
+      <li>
+        <a href="{% url 'paintings' %}">
+          <div class="content">
+            <h2>Art on Canvas</h2>
+            <p>All kinds of paperwork for you to choose</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'woodcraft' %}">
+          <div class="content">
+            <h2>Wood and Metal</h2>
+            <p>Independent artists show off crafting for DIY and decoration</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'digital_assets' %}">
+          <div class="content">
+            <h2>NFT's</h2>
+            <p>Hundreds of digital assets and collections to grab</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'sculptures' %}">
+          <div class="content">
+            <h2>Sculptures</h2>
+            <p>Marble, sandstone, alabaster, and more, famous or independent artworks</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'other_craftings' %}">
+          <div class="content">
+            <h2>Other pieces</h2>
+            <p>Clay, fibers and many other materiales to work with</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
 
 {{ myText }}
 

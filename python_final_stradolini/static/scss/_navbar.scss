@@ -24,14 +24,14 @@
           font-size: 1.5rem;
           font-weight: 500;
           margin: 0 10px 0 10px;
-          color: rgb(255, 255, 255, 0.6);
+          color: rgb(255, 255, 255, 0.5);
           user-select: none !important;
         }
       }
       .navbar-collapse {
         background-color: transparent;
         flex-grow: 0;
-        width: 70%;
+        width: auto;
         justify-content: space-between;
         align-items: center;
         .navbar-nav {
@@ -58,7 +58,7 @@
             margin: 0 10px 0 10px;
             color: rgba(0, 0, 0, 0.6) !important;
             box-shadow: none !important;
-            font-size: 16px;
+            font-size: 20px;
             color: #e1e1e1 !important;
             font-weight: 400;
             cursor: pointer;

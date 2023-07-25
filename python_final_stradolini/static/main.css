@@ -12002,7 +12002,7 @@ textarea.form-control-lg {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0 10px 0 10px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
           user-select: none !important;
@@ -12010,7 +12010,7 @@ textarea.form-control-lg {
 .header .navbar .container-fluid .navbar-collapse, .header .navbar .container-sm .navbar-collapse, .header .navbar .container-md .navbar-collapse, .header .navbar .container-lg .navbar-collapse, .header .navbar .container-xl .navbar-collapse, .header .navbar .container-xxl .navbar-collapse {
   background-color: transparent;
   flex-grow: 0;
-  width: 70%;
+  width: auto;
   justify-content: space-between;
   align-items: center;
 }
@@ -12037,7 +12037,7 @@ textarea.form-control-lg {
   margin: 0 10px 0 10px;
   color: rgba(0, 0, 0, 0.6) !important;
   box-shadow: none !important;
-  font-size: 16px;
+  font-size: 20px;
   color: #e1e1e1 !important;
   font-weight: 400;
   cursor: pointer;
@@ -13280,6 +13280,126 @@ textarea.form-control-lg {
   left: 0;
   right: 0;
   opacity: 1;
+}
+
+.main-container-gallery {
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 0;
+}
+.main-container-gallery .main-container-gallery-textc {
+  display: flex;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(166, 0, 207, 0.25), rgba(207, 0, 179, 0.5), rgba(0, 0, 0, 0.8));
+}
+.main-container-gallery .main-container-gallery-textc .main-container-gallery_text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 4rem;
+  line-height: 4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 0 0;
+}
+.main-container-gallery .section-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container-gallery .section-container ul {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  margin: 0;
+  padding: 0;
+  background: url("../../static/imgs/gallery/painting.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.main-container-gallery .section-container ul li {
+  list-style: none;
+  position: relative;
+  width: 20%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  overflow: hidden;
+}
+.main-container-gallery .section-container ul li a .content {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(133, 16, 80, 0.644);
+  box-sizing: border-box;
+  color: white;
+  opacity: 0;
+}
+.main-container-gallery .section-container ul li a .content:hover {
+  background: rgba(190, 0, 117, 0.829);
+  transition: 0.3s ease-in-out;
+}
+.main-container-gallery .section-container ul li:nth-child(1) {
+  background: url("../../static/imgs/gallery/painting.jpg");
+  background-size: cover;
+  background-position: 0% 30%;
+  filter: saturate(50%);
+}
+.main-container-gallery .section-container ul li:nth-child(2) {
+  background: url("../../static/imgs/gallery/woodcraft.jpg");
+  background-size: cover;
+  background-position: 0% 30%;
+  filter: saturate(50%);
+}
+.main-container-gallery .section-container ul li:nth-child(3) {
+  background: url("../../static/imgs/gallery/nft.jpg");
+  background-size: cover;
+  background-position: 0% 30%;
+  filter: saturate(50%);
+}
+.main-container-gallery .section-container ul li:nth-child(4) {
+  background: url("../../static/imgs/gallery/sculpture.jpg");
+  background-size: cover;
+  background-position: 0% 30%;
+  filter: saturate(50%);
+}
+.main-container-gallery .section-container ul li:nth-child(5) {
+  background: url("../../static/imgs/gallery/other.jpg");
+  background-size: cover;
+  background-position: 0% 30%;
+  filter: saturate(50%);
+}
+.main-container-gallery .section-container ul:hover li {
+  width: 16.25%;
+  overflow: hidden;
+  transition: 0.8s;
+}
+.main-container-gallery .section-container ul li:hover {
+  width: 35%;
+  filter: contrast(120%);
+  filter: saturate(100%);
+  overflow: hidden;
+}
+.main-container-gallery .section-container ul li:hover .content {
+  bottom: 0;
+  transition: 1s ease-in-out;
+  opacity: 1;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
 
 html,
