@@ -1,5 +1,45 @@
 {% extends 'gallery_father.html' %}
 {% load static %}
 {% block changeblock2 %}
-<h1>PAGE 4 BLOG VIEW</h1>
+
+<div class="paintings-list-container">
+  <div class="paintings-list-container-textc">
+    <p>NFTs LIST</p>
+  </div>
+  <div class="paintings-list-container-cards">
+    {% for course in object_list %}
+    {% if course.item_genre == "Nfts" %}
+    <div class="card">
+      <div class="content">
+        <div class="back">
+          <div class="back-content">
+            <strong>{{course.item_name}}</strong>
+            <img src="{{STATIC_URL}}/media/{{course.item_image}}" alt="itemimage">
+            <strong>${{course.item_price}}</strong>
+          </div>
+        </div>
+        <div class="front">
+          <div class="img">
+            <img src="{{STATIC_URL}}/media/{{course.item_image}}" alt="backcard">
+          </div>
+          <div class="front-content">
+            <div class="description">
+              <div class="title">
+                <p class="title">
+                  <strong>{{course.item_name}}</strong>
+                </p>
+              </div>
+              <button class="button">
+                <a href="">Details</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
 {% endblock %}

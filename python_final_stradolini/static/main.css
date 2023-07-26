@@ -12037,7 +12037,7 @@ textarea.form-control-lg {
   margin: 0 10px 0 10px;
   color: rgba(0, 0, 0, 0.6) !important;
   box-shadow: none !important;
-  font-size: 20px;
+  font-size: 18px;
   color: #e1e1e1 !important;
   font-weight: 400;
   cursor: pointer;
@@ -12152,7 +12152,7 @@ textarea.form-control-lg {
   width: 100%;
   height: 90vh;
   background-position: 10% 20%;
-  background-image: url("../static/imgs/index/monalisa.jpg");
+  background-image: url("../static/imgs/index/pxfuel.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -12167,6 +12167,7 @@ textarea.form-control-lg {
 .modifications-container .center .center-container .center-container_inner .center-container-title_container {
   padding: 0 10px 0 10px;
   background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(207, 0, 114, 0.25), rgba(207, 0, 114, 0.5), rgba(0, 0, 0, 0.8));
+  background: rgba(0, 0, 0, 0.493);
 }
 .modifications-container .center .center-container .center-container_inner .center-container-title_container .center-container_title_text {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -12180,12 +12181,12 @@ textarea.form-control-lg {
 .modifications-container .center .center-container .center-container_inner .center-container-subtitle_container {
   width: 80vw;
   padding: 10px 10px 10px 10px;
-  margin: -50px 0 0 0;
+  margin: 0 0 0 0;
 }
 .modifications-container .center .center-container .center-container_inner .center-container-subtitle_container .center-container_subtitle_text {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 0 -2px 1px #222222;
+  text-shadow: 0 2px 3px #222222;
   font-size: 4.5vw;
   margin: 0 0 0 0;
   -webkit-user-select: none;
@@ -12234,7 +12235,7 @@ textarea.form-control-lg {
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #ffffff;
+  background: black;
   border-radius: 1.625rem;
 }
 .modifications-container .center .center-container .center-container_inner .center-container-button_container .learn-more .circle .icon {
@@ -12243,7 +12244,7 @@ textarea.form-control-lg {
   top: 0;
   bottom: 0;
   margin: auto;
-  background: #686868;
+  background: white;
 }
 .modifications-container .center .center-container .center-container_inner .center-container-button_container .learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -12259,8 +12260,8 @@ textarea.form-control-lg {
   right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;
-  border-top: 0.125rem solid #686868;
-  border-right: 0.125rem solid #686868;
+  border-top: 0.125rem solid white;
+  border-right: 0.125rem solid white;
   transform: rotate(45deg);
 }
 .modifications-container .center .center-container .center-container_inner .center-container-button_container .button-text {
@@ -12272,7 +12273,7 @@ textarea.form-control-lg {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #ffffff;
+  color: black;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -12288,7 +12289,7 @@ textarea.form-control-lg {
   transform: translate(1rem, 0);
 }
 .modifications-container .center .center-container .center-container_inner .learn-more:hover .button-text a {
-  color: #686868;
+  color: white;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -12301,7 +12302,7 @@ textarea.form-control-lg {
   text-align: center;
 }
 .modifications-container .center .center-container .center-container_inner .center-container-bottomt_container p {
-  color: rgb(161, 161, 161);
+  color: rgb(68, 68, 68);
   padding: 0 50px 0 50px;
   font-size: 1rem;
 }
@@ -13400,6 +13401,206 @@ textarea.form-control-lg {
   opacity: 1;
   overflow: hidden;
   margin-bottom: 40px;
+}
+
+.paintings-list-container {
+  display: flex;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paintings-list-container .paintings-list-container-textc p {
+  color: white;
+  font-weight: 700;
+  font-size: 4rem;
+}
+.paintings-list-container .paintings-list-container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.paintings-list-container .paintings-list-container-cards .card {
+  overflow: visible;
+  width: 220px;
+  height: 320px;
+  margin: 20px;
+  border-style: none;
+}
+.paintings-list-container .paintings-list-container-cards .card .content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.9333333333);
+  border-radius: 5px;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .back {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .back .back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #000000;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .back .back-content img {
+  display: block;
+  min-width: 220px;
+  max-width: 220px;
+  min-height: 260px;
+  max-height: 260px;
+  width: auto;
+  height: auto;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .back::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, rgb(219, 23, 131), rgb(219, 23, 131), rgb(219, 23, 131), rgb(219, 23, 131), transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front {
+  transform: rotateY(180deg);
+  color: white;
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front .img img {
+  width: 100%;
+  height: 100%;
+  filter: saturate(0%);
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .title {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .title p {
+  width: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .button {
+  --bg: #000;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.4em 1em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .button a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .button:hover {
+  color: #ffffff;
+  transform: translate(-0.25rem, -0.25rem);
+  background: rgb(219, 23, 131);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+.paintings-list-container .paintings-list-container-cards .card:hover .content {
+  transform: rotateY(180deg);
+}
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+.paintings-list-container .paintings-list-container-cards #bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+.paintings-list-container .paintings-list-container-cards #right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 html,

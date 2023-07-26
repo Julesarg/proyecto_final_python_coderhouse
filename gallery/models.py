@@ -2,7 +2,7 @@ from django.db import models
 import datetime
 
 class Item(models.Model):
-    item_name = models.CharField(max_length=100)
+    item_name = models.CharField(max_length=25)
     item_created = models.DateField(("Date"), default=datetime.date.today)
     item_price = models.IntegerField()
     item_description = models.CharField(max_length=999)
