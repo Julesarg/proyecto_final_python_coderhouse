@@ -13403,7 +13403,7 @@ textarea.form-control-lg {
   margin-bottom: 40px;
 }
 
-.paintings-list-container {
+.list-container {
   display: flex;
   width: 100vw;
   height: -moz-fit-content;
@@ -13412,12 +13412,12 @@ textarea.form-control-lg {
   justify-content: center;
   align-items: center;
 }
-.paintings-list-container .paintings-list-container-textc p {
+.list-container .list-container-textc p {
   color: white;
   font-weight: 700;
   font-size: 4rem;
 }
-.paintings-list-container .paintings-list-container-cards {
+.list-container .list-container-cards {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
@@ -13427,14 +13427,14 @@ textarea.form-control-lg {
   justify-content: center;
   align-items: center;
 }
-.paintings-list-container .paintings-list-container-cards .card {
+.list-container .list-container-cards .card {
   overflow: visible;
   width: 220px;
   height: 320px;
   margin: 20px;
   border-style: none;
 }
-.paintings-list-container .paintings-list-container-cards .card .content {
+.list-container .list-container-cards .card .content {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
@@ -13442,7 +13442,7 @@ textarea.form-control-lg {
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.9333333333);
   border-radius: 5px;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .back {
+.list-container .list-container-cards .card .content .back {
   justify-content: center;
   display: flex;
   align-items: center;
@@ -13455,7 +13455,7 @@ textarea.form-control-lg {
   border-radius: 5px;
   overflow: hidden;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .back .back-content {
+.list-container .list-container-cards .card .content .back .back-content {
   position: absolute;
   width: 99%;
   height: 99%;
@@ -13469,7 +13469,7 @@ textarea.form-control-lg {
   align-items: center;
   text-align: center;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .back .back-content img {
+.list-container .list-container-cards .card .content .back .back-content img {
   display: block;
   min-width: 220px;
   max-width: 220px;
@@ -13477,8 +13477,10 @@ textarea.form-control-lg {
   max-height: 260px;
   width: auto;
   height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .back::before {
+.list-container .list-container-cards .card .content .back::before {
   position: absolute;
   content: " ";
   display: block;
@@ -13487,7 +13489,7 @@ textarea.form-control-lg {
   background: linear-gradient(90deg, transparent, rgb(219, 23, 131), rgb(219, 23, 131), rgb(219, 23, 131), rgb(219, 23, 131), transparent);
   animation: rotation_481 5000ms infinite linear;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front {
+.list-container .list-container-cards .card .content .front {
   transform: rotateY(180deg);
   color: white;
   background-color: #151515;
@@ -13499,7 +13501,7 @@ textarea.form-control-lg {
   border-radius: 5px;
   overflow: hidden;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front .img {
+.list-container .list-container-cards .card .content .front .img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -13508,12 +13510,14 @@ textarea.form-control-lg {
   -o-object-position: center;
      object-position: center;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front .img img {
-  width: 100%;
-  height: 100%;
+.list-container .list-container-cards .card .content .front .img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   filter: saturate(0%);
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front .front-content {
+.list-container .list-container-cards .card .content .front .front-content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -13523,25 +13527,25 @@ textarea.form-control-lg {
   justify-content: flex-end;
   text-align: center;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description {
+.list-container .list-container-cards .card .content .front .front-content .description {
   width: 100%;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .title {
+.list-container .list-container-cards .card .content .front .front-content .description .title {
   font-size: 11px;
   max-width: 100%;
   display: flex;
   justify-content: center;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .title p {
+.list-container .list-container-cards .card .content .front .front-content .description .title p {
   width: auto;
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   line-height: 1.4rem;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .button {
+.list-container .list-container-cards .card .content .front .front-content .description .button {
   --bg: #000;
   border: 1px solid var(--bg);
   border-radius: 4px;
@@ -13549,22 +13553,22 @@ textarea.form-control-lg {
   background: var(--bg);
   transition: 0.2s;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .button a {
+.list-container .list-container-cards .card .content .front .front-content .description .button a {
   text-decoration: none;
   color: #fff;
   display: flex;
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .button:hover {
+.list-container .list-container-cards .card .content .front .front-content .description .button:hover {
   color: #ffffff;
   transform: translate(-0.25rem, -0.25rem);
   background: rgb(219, 23, 131);
   box-shadow: 0.25rem 0.25rem var(--bg);
 }
-.paintings-list-container .paintings-list-container-cards .card .content .front .front-content .description .button:active {
+.list-container .list-container-cards .card .content .front .front-content .description .button:active {
   transform: translate(0);
   box-shadow: none;
 }
-.paintings-list-container .paintings-list-container-cards .card:hover .content {
+.list-container .list-container-cards .card:hover .content {
   transform: rotateY(180deg);
 }
 @keyframes rotation_481 {
@@ -13575,21 +13579,127 @@ textarea.form-control-lg {
     transform: rotateZ(360deg);
   }
 }
-.paintings-list-container .paintings-list-container-cards #bottom {
-  background-color: #ff8866;
-  left: 50px;
-  top: 0px;
-  width: 150px;
-  height: 150px;
-  animation-delay: -800ms;
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
-.paintings-list-container .paintings-list-container-cards #right {
-  background-color: #ff2233;
-  left: 160px;
-  top: -80px;
-  width: 30px;
-  height: 30px;
-  animation-delay: -1800ms;
+
+.list-detail-container {
+  display: flex;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.list-detail-container .list-detail-container-textc p {
+  color: white;
+  font-weight: 700;
+  font-size: 4rem;
+}
+.list-detail-container .list-detail-container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.list-detail-container .list-detail-container-cards .card {
+  overflow: visible;
+  width: 800px;
+  height: 420px;
+  margin: 20px;
+  border-style: none;
+}
+.list-detail-container .list-detail-container-cards .card .content {
+  width: 100%;
+  height: 100%;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.9333333333);
+  border-radius: 5px;
+}
+.list-detail-container .list-detail-container-cards .card .content .back {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.list-detail-container .list-detail-container-cards .card .content .back .back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #000000;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-img {
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+.list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc .p1 {
+  font-size: 2rem;
+}
+.list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc .p2 {
+  font-size: 1.5rem;
+}
+.list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc .p3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.list-detail-container .list-detail-container-cards .card .content .back::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, rgb(219, 23, 131), rgb(219, 23, 131), rgb(219, 23, 131), rgb(219, 23, 131), transparent);
+  animation: rotation_481 8000ms infinite linear;
+}
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  0% {
+    transform: rotateZ(360deg);
+  }
 }
 @keyframes floating {
   0% {

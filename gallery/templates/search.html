@@ -4,41 +4,41 @@
 
 <div class="list-container">
   <div class="list-container-textc">
-    <p>WOOD AND METAL CRAFTING LIST</p>
+    <p>RESULTS LIST</p>
   </div>
   <div class="list-container-cards">
-    {% for item in object_list %}
-    {% if item.item_genre == "Handcraft (Wood, Metal, etc)" %}
+    {% if item %}
+    {% for result in item %}
     <div class="card">
       <div class="content">
         <div class="back">
           <div class="back-content">
-            <strong>{{item.item_name}}</strong>
-            <img src="{{STATIC_URL}}/media/{{item.item_image}}" alt="itemimage">
-            <strong>${{item.item_price}}</strong>
+            <strong>{{result.item_name}}</strong>
+            <img src="{{STATIC_URL}}/media/{{result.item_image}}" alt="itemimage">
+            <strong>${{result.item_price}}</strong>
           </div>
         </div>
         <div class="front">
           <div class="img">
-            <img src="{{STATIC_URL}}/media/{{item.item_image}}" alt="backcard">
+            <img src="{{STATIC_URL}}/media/{{result.item_image}}" alt="backcard">
           </div>
           <div class="front-content">
             <div class="description">
               <div class="title">
                 <p class="title">
-                  <strong>{{item.item_name}}</strong>
+                  <strong>{{result.item_name}}</strong>
                 </p>
               </div>
               <button class="button">
-                <a href="{% url 'detail_item' item.id %}">Details</a>
+                <a href="">Details</a>
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    {% endif %}
     {% endfor %}
+    {% endif %}
   </div>
 </div>
 

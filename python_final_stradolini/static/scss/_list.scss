@@ -1,18 +1,18 @@
-.paintings-list-container {
+.list-container {
   display: flex;
   width: 100vw;
   height: fit-content;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .paintings-list-container-textc {
+  .list-container-textc {
     p {
       color: white;
       font-weight: 700;
       font-size: 4rem;
     }
   }
-  .paintings-list-container-cards {
+  .list-container-cards {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
@@ -66,6 +66,7 @@
               max-height: 260px;
               width: auto;
               height: auto;
+              object-fit: contain;
             }
           }
         }
@@ -104,8 +105,9 @@
             object-fit: cover;
             object-position: center;
             img {
-              width: 100%;
-              height: 100%;
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: contain;
               filter: saturate(0%);
             }
           }
@@ -179,23 +181,6 @@
       0% {
         transform: rotateZ(360deg);
       }
-    }
-
-    #bottom {
-      background-color: #ff8866;
-      left: 50px;
-      top: 0px;
-      width: 150px;
-      height: 150px;
-      animation-delay: -800ms;
-    }
-    #right {
-      background-color: #ff2233;
-      left: 160px;
-      top: -80px;
-      width: 30px;
-      height: 30px;
-      animation-delay: -1800ms;
     }
     @keyframes floating {
       0% {

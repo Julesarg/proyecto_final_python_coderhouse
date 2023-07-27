@@ -1,0 +1,31 @@
+{% extends 'gallery_father.html' %}
+{% load static %}
+{% block changeblock2 %}
+
+<div class="list-detail-container">
+  <div class="list-detail-container-textc">
+    <p>DETAIL</p>
+  </div>
+  <div class="list-detail-container-cards">
+    <div class="card">
+      <div class="content">
+        <div class="back">
+          <div class="back-content">
+            <div class="back-content-img">
+              <img src="{{STATIC_URL}}/media/{{item.item_image}}" alt="itemimage">
+            </div>
+            <div class="back-content-rightc">
+              <p class="p1">{{item.item_name}}</p>
+              <p class="p2">Price: ${{item.item_price}}</strong></p>
+              <strong>Quantity available: {{item.item_stock}}</strong>
+              <p class="p3">{{item.item_description}}</strong></p>
+              <strong>Art branch: {{item.item_genre}}</strong>
+              <strong>Material/s: {{item.item_material}}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

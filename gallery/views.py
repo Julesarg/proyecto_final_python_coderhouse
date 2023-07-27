@@ -8,22 +8,8 @@ from django.views.generic.edit import CreateView,UpdateView,DeleteView
 
 def gallery_home(request):
     return render(request, 'gallery_home.html')
-
-# def paintings(request):
-#     return render(request, 'paintings.html')
-
-# def sculptures(request):
-#     return render(request, 'sculptures.html')
-
-# def wood_and_metal(request):
-#     return render(request, 'wood_and_metal.html')
-
-# def digital_assets(request):
-#     return render(request, 'digital_assets.html')
-
-# def other_craftings(request):
-#     return render(request, 'other_craftings.html')
-
+def search_fail(request):
+    return render(request, 'gallery/search_fail.html')
 def add_p(request):
     if request.method == "POST":
         myForm = ItemForm(request.POST, request.FILES)
@@ -36,7 +22,7 @@ def add_p(request):
         myForm = ItemForm()
     return render(request, 'add_item.html', {'myForm': myForm})
 
-
+##listado de items general por genero##
 class PaintingList(ListView):
     model = Item
     template_name = 'paintings.html'
@@ -52,27 +38,39 @@ class NftList(ListView):
 class OtherList(ListView):
     model = Item
     template_name = 'other_craftings.html'
-
-
-
-
-
-
-
-
-
-
-class CourseDetail(DetailView):
+## detalle de item ##
+class ItemDetail(DetailView):
     model = Item
-    template_name = 'mainApp/course_detail.html'
-class CourseCreate(CreateView):
-    model = Item
-    success_url = '/mainApp/course/list'
-    fields = ['name', 'course_number']
-class CourseUpdate(UpdateView):
-    model = Item
-    success_url = '/mainApp/course/list'
-    fields = ['name', 'course_number']
-class CourseDelete(DeleteView):
-    model = Item
-    success_url = '/mainApp/course/list'
+    template_name = 'detail_item.html'
+
+
+
+# class CourseCreate(CreateView):
+#     model = Item
+#     success_url = '/mainApp/course/list'
+#     fields = ['name', 'course_number']
+# class CourseUpdate(UpdateView):
+#     model = Item
+#     success_url = '/mainApp/course/list'
+#     fields = ['name', 'course_number']
+# class CourseDelete(DeleteView):
+#     model = Item
+#     success_url = '/mainApp/course/list'
+
+
+## busqueda de item por material ##
+def searchByMat(request):
+    if request.GET['item_material']:
+        item_material = request.GET['item_material']
+        item = Item.objects.filter(item_material__icontains=item_material)
+        if item:
+            return render(request, 'search.html', {'item': item, 'item_material': item_material})
+        elif not item:
+            return render(request, 'search_fail.html')
+        else:            
+            return render(request, 'gallery_home.html')
+    else:
+        # return redirect('../errorMessage')
+        return render(request, 'paintings.html')
+    
+    ##FALTAN VISTAS DE ERROR##
