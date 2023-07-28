@@ -123,3 +123,28 @@
     }
   }
 }
+@media (max-width: 1280px) {
+  .main-container-gallery {
+    .main-container-gallery-textc {
+      .main-container-gallery_text {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .main-container-gallery {
+    .main-container-gallery-textc {
+      .main-container-gallery_text {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+    }
+    .section-container {
+      ul {
+        height: 300px;
+      }
+    }
+  }
+}

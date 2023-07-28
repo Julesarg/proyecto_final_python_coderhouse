@@ -153,3 +153,24 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .modifications-container {
+    .main-container-signup {
+      .form {
+        .form-group {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .modifications-container {
+    .main-container-signup {
+      .form {
+        width: 90vw;
+      }
+    }
+  }
+}

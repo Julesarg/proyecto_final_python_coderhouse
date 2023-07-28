@@ -3,11 +3,10 @@
 {% block changeblock4 %}
 
 <div class="main-container-login">
-
   <form action="" class="form" method="" enctype="multipart/form-data">{% csrf_token %}
     <div class="title">Hi there again, please Log in</div>
     <div class="form-row">
-      <div class="form-group col-md-6 ">
+      <div class="form-group col-md-12 ">
         <label for="id_username">Username</label>
         <input type="text" class="form-control input" name="username" id="id_username" maxlength="15" required=""
           placeholder="type your username">
@@ -15,7 +14,7 @@
     </div>
 
     <div class="form-row">
-      <div class="form-group col-md-6 ">
+      <div class="form-group col-md-12 ">
         <label for="id_password">Password</label>
         <input type="password" class="form-control input" name="password" required="" id="id_password"
           placeholder="type your password">
@@ -23,7 +22,7 @@
     </div>
 
     <div class="form-row">
-      <div class="form-group col-md-6 ">
+      <div class="form-group col-md-12 ">
         <label for="id_password">Repeat Password</label>
         <input type="password" class="form-control input" name="password" required="" id="id_password"
           placeholder="repeat your password">
@@ -34,5 +33,9 @@
       <span>Login</span>
     </button>
   </form>
+
+  <div class="main-container-login-imgc">
+    <img src="{{STATIC_URL}}/static/imgs/login/login.svg" alt="login image">
+  </div>
 </div>
 {% endblock %}

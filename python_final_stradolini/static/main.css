@@ -12831,7 +12831,7 @@ textarea.form-control-lg {
   width: 100vw;
 }
 .main-container-about .main-container-left .main-container-left-title .main-container-left-title_up .p1 {
-  color: rgb(219, 23, 131);
+  color: #db1783;
   font-size: 3rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -13156,17 +13156,29 @@ textarea.form-control-lg {
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .modifications-container .main-container-signup .form .form-group {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .modifications-container .main-container-signup .form {
+    width: 90vw;
+  }
+}
+.modifications-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .modifications-container .main-container-login {
   display: flex;
-  width: 100vw;
+  width: 80vw;
   height: -moz-fit-content;
   height: fit-content;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 200px 0 200px 0;
-}
-.modifications-container .main-container-login .form {
+  margin: 100px 0 100px 0;
   background-color: black;
   border-radius: 20px;
   border-bottom-style: solid;
@@ -13174,10 +13186,29 @@ textarea.form-control-lg {
   border-bottom-color: rgba(207, 0, 114, 0.7);
   border-right-color: rgba(207, 0, 114, 0.7);
   box-sizing: border-box;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 20px;
-  width: 70vw;
+}
+.modifications-container .main-container-login .main-container-login-imgc {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+}
+.modifications-container .main-container-login .main-container-login-imgc img {
+  width: 80%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.modifications-container .main-container-login .form {
+  box-sizing: border-box;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px 0 20px 0;
+  width: 50%;
 }
 .modifications-container .main-container-login .form .title {
   font-size: 2rem;
@@ -13283,6 +13314,17 @@ textarea.form-control-lg {
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .modifications-container .main-container-login .main-container-login-imgc {
+    display: none;
+  }
+  .modifications-container .main-container-login .form {
+    width: 100%;
+  }
+  .modifications-container .main-container-login .form .form-row .form-group {
+    width: 100%;
+  }
+}
 .main-container-gallery {
   width: 100vw;
   height: -moz-fit-content;
@@ -13403,6 +13445,21 @@ textarea.form-control-lg {
   margin-bottom: 40px;
 }
 
+@media (max-width: 1280px) {
+  .main-container-gallery .main-container-gallery-textc .main-container-gallery_text {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .main-container-gallery .main-container-gallery-textc .main-container-gallery_text {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .main-container-gallery .section-container ul {
+    height: 300px;
+  }
+}
 .list-container {
   display: flex;
   width: 100vw;
