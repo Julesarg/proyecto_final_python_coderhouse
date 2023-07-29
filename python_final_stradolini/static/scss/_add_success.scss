@@ -1,0 +1,92 @@
+.add-container {
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 200px 0 200px 0;
+  .add-title-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .add-title_text {
+      color: white;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2rem;
+      user-select: none;
+      font-family: "Montserrat", sans-serif;
+      margin: 0 0 0 0;
+      text-align: center;
+    }
+    .lootie {
+      height: fit-content;
+    }
+  }
+  .buttonback-container {
+    display: flex;
+    width: 90%;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: white;
+    justify-content: center;
+    padding: 10px 0 0 0;
+    margin: 50px 0 0 0;
+    .buttonback {
+      position: relative;
+      height: 40px;
+      width: 120px;
+      color: #ffffff;
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      background-color: transparent;
+      transition: all 0.5s;
+      border: none;
+    }
+
+    .buttonback::before {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s;
+      z-index: 1;
+    }
+
+    .buttonback:hover::before {
+      opacity: 0;
+      transform: scale(0.7, 0.7);
+    }
+
+    .buttonback::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s;
+      border: 1px solid #ffffff;
+      transform: scale(1.2, 1.2);
+      opacity: 0;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .buttonback:hover::after {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+}
+@media (max-width: 576px) {
+  .add-container {
+    margin: 50px 0 50px 0;
+  }
+}

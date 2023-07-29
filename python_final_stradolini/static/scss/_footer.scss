@@ -229,19 +229,16 @@
     border-top-color: rgba(207, 0, 114, 0.7);
     .footer-last-container_left {
       display: flex;
-      width: 50%;
       p {
         color: rgb(255, 255, 255, 0.5);
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.7rem;
-        margin-right: 20px;
+        margin-left: 20px;
         user-select: none;
       }
     }
     .footer-last-container_right {
       display: flex;
-      width: 50%;
-      justify-content: flex-end;
       p {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.7rem;

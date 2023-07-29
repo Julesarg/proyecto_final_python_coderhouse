@@ -1,21 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+{% extends 'gallery_father.html' %}
+{% load static %}
+{% block changeblock2 %}
+<div class="delete-container">
+  <div class="delete-title-container">
+    <p class="delete-title_text">Are you sure you want to delete "{{object.item_name}}"</p>
+    <p class="delete-title_text">This action can't be undone</p>
+    <form action="" method="POST">{% csrf_token %}
 
-<body>
-  <form action="" method="POST">{% csrf_token %}
+      <button class="cssbuttons-io">
+        <span><input type="submit" value="Delete" /></span>
+
+      </button>
+
+    </form>
+    <lottie-player class="lootie" src="https://lottie.host/3aff1850-2137-41fa-b559-d8a7b3f1602a/pHXv44yTTm.json"
+      background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+  </div>
+  <div class="buttonback-container">
+    <button class="buttonback" onclick="history.back()">
+      Back
+    </button>
+    <button class="buttonback" onclick="history.back()">
+      <a href="{% url 'gallery_home' %}">Cancel</a>
+    </button>
+  </div>
+</div>
+
+{% endblock %}
+
+
+<!-- <form action="" method="POST">{% csrf_token %}
     Sure you want to delete {{object}}?
     <input type="submit" value="submit" />
   </form>
   <a href="{% url 'gallery_home' %}">Cancel</a>
-  <button onclick="history.back()">Return</button>
-</body>
+  <button onclick="history.back()">Return</button> -->
 
-</html>
-
-<!--falta diseno-->
+<button class="cssbuttons-io">
+  <input class="migrated" type="submit" value="Delete" />
+</button>

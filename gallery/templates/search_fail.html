@@ -2,11 +2,19 @@
 {% load static %}
 {% block changeblock2 %}
 
+
 <div class="list-container">
   <div class="list-container-textc">
-    <p>NO RESULTS FOUND IN OUR DATABASE</p>
-    <p>according to your search, please try again</p>
-    <button onclick="history.back()">Return</button>
+    <div class="list-title-container">
+      <p>NO RESULTS FOUND IN OUR DATABASE</p>
+      <p>according to your search, please try again</p>
+    </div>
+  </div>
+
+  <div class="buttonback-container">
+    <button class="buttonback" onclick="history.back()">
+      Back
+    </button>
   </div>
 </div>
 

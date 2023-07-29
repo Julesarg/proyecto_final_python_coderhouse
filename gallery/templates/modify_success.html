@@ -1,0 +1,18 @@
+{% extends 'gallery_father.html' %}
+{% load static %}
+{% block changeblock2 %}
+<div class="add-container">
+  <div class="add-title-container">
+    <p class="add-title_text">Your item "{{item.item_name}}" was correctly modified</p>
+    <lottie-player class="lootie" src="https://lottie.host/5b1f862e-2015-42fd-b531-8e0b254bc5e6/7dx9XR83v2.json"
+      background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+  </div>
+
+  <div class="buttonback-container">
+    <button class="buttonback" onclick="history.back()">
+      Back
+    </button>
+  </div>
+</div>
+
+{% endblock %}
