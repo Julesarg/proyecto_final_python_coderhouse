@@ -28,6 +28,7 @@
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
       margin: 0 0 0 0;
+      text-align: center;
     }
   }
   .section-container {
@@ -39,7 +40,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 700px;
+      height: 600px;
       margin: 0;
       padding: 0;
       background: url("../../static/imgs/gallery/painting.jpg");
@@ -122,6 +123,16 @@
       margin-bottom: 40px;
     }
   }
+  h4 {
+    color: rgb(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+  .container-searchbar {
+    width: 550px;
+  }
 }
 @media (max-width: 1280px) {
   .main-container-gallery {
@@ -145,6 +156,9 @@
       ul {
         height: 300px;
       }
+    }
+    .container-searchbar {
+      width: 90%;
     }
   }
 }

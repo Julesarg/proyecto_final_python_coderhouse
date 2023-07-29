@@ -5,12 +5,11 @@ from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
 
-
 def gallery_home(request):
     return render(request, 'gallery_home.html')
 def search_fail(request):
     return render(request, 'gallery/search_fail.html')
-def add_p(request):
+def add_item(request):
     if request.method == "POST":
         myForm = ItemForm(request.POST, request.FILES)
         if myForm.is_valid():
@@ -38,25 +37,27 @@ class NftList(ListView):
 class OtherList(ListView):
     model = Item
     template_name = 'other_craftings.html'
-## detalle de item ##
+
 class ItemDetail(DetailView):
     model = Item
     template_name = 'detail_item.html'
 
+class ItemDelete(DeleteView):
+    model = Item
+    success_url ="/gallery/"
+     
+    template_name = "item_confirm_delete.html"
+
+class ItemUpdate(UpdateView):
+    model = Item
+    success_url = '/gallery/'
+    template_name = 'item_form.html'
+    fields = ['item_name','item_created', 'item_price', 'item_description', 'item_image', 'item_stock', 'item_genre', 'item_material']
 
 
-# class CourseCreate(CreateView):
-#     model = Item
-#     success_url = '/mainApp/course/list'
-#     fields = ['name', 'course_number']
-# class CourseUpdate(UpdateView):
-#     model = Item
-#     success_url = '/mainApp/course/list'
-#     fields = ['name', 'course_number']
-# class CourseDelete(DeleteView):
-#     model = Item
-#     success_url = '/mainApp/course/list'
-
+##back button#############################
+def on_backbutton_clicked(self, widget):
+    self.webview.go_back()
 
 ## busqueda de item por material ##
 def searchByMat(request):
@@ -64,7 +65,7 @@ def searchByMat(request):
         item_material = request.GET['item_material']
         item = Item.objects.filter(item_material__icontains=item_material)
         if item:
-            return render(request, 'search.html', {'item': item, 'item_material': item_material})
+            return render(request, 'search_success.html', {'item': item, 'item_material': item_material})
         elif not item:
             return render(request, 'search_fail.html')
         else:            

@@ -52,9 +52,11 @@
   </section>
 
 
-  <!--busqueda de estudiante-->
-  <form class="w-25 p-3 d-flex" role="search" action="/gallery/search/" method="GET">
-    <input class="form-control me-2" type="text" placeholder="search by material" aria-label="Search"
+  <!--busqueda-->
+
+  <h4>Or search by a specific material</h4>
+  <form class="p-3 d-flex container-searchbar" role="search" action="/gallery/search_success/" method="GET">
+    <input class="form-control me-2" type="text" placeholder="type your text here" aria-label="Search"
       name='item_material' id='item_material'>
     <button class="btn btn-light" type="submit">Search</button>
   </form>

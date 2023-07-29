@@ -4,11 +4,14 @@
 
 <div class="list-container">
   <div class="list-container-textc">
-    <p>OTHER CRAFTINGS LIST</p>
+    <p>OTHER CRAFTINGs LIST</p>
+    <button><a href="{% url 'add_item' %}">ADD NEW PRODUCT</a></button>
   </div>
   <div class="list-container-cards">
     {% for item in object_list %}
     {% if item.item_genre == "Other" %}
+    <a href="{% url 'delete' item.id %}">Delete</a>
+    <a href="{% url 'edit' item.id %}">Edit</a>
     <div class="card">
       <div class="content">
         <div class="back">
@@ -40,6 +43,7 @@
     {% endif %}
     {% endfor %}
   </div>
+  <button onclick="history.back()">Return</button>
 </div>
 
 {% endblock %}

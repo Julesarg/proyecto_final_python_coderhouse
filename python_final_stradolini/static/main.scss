@@ -12,6 +12,28 @@
 @import "scss/detail";
 @import "scss/message";
 
+//SCROLLBAR//
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2c2c2c;
+}
+
 html,
 body {
   display: flex;

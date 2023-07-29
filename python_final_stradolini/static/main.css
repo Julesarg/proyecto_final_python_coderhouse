@@ -12561,7 +12561,7 @@ textarea.form-control-lg {
   justify-content: center;
   width: 400px;
   height: 30vh;
-  margin: 0 0 100px 0;
+  margin: 50px 0 0 0;
 }
 .footer-container .footer-container_center .footer-container_center-down {
   display: flex;
@@ -13353,6 +13353,7 @@ textarea.form-control-lg {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   margin: 0 0 0 0;
+  text-align: center;
 }
 .main-container-gallery .section-container {
   width: 100%;
@@ -13364,7 +13365,7 @@ textarea.form-control-lg {
   top: 0;
   left: 0;
   width: 100%;
-  height: 700px;
+  height: 600px;
   margin: 0;
   padding: 0;
   background: url("../../static/imgs/gallery/painting.jpg");
@@ -13444,6 +13445,16 @@ textarea.form-control-lg {
   overflow: hidden;
   margin-bottom: 40px;
 }
+.main-container-gallery h4, .main-container-gallery .h4 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+.main-container-gallery .container-searchbar {
+  width: 550px;
+}
 
 @media (max-width: 1280px) {
   .main-container-gallery .main-container-gallery-textc .main-container-gallery_text {
@@ -13458,6 +13469,9 @@ textarea.form-control-lg {
   }
   .main-container-gallery .section-container ul {
     height: 300px;
+  }
+  .main-container-gallery .container-searchbar {
+    width: 90%;
   }
 }
 .list-container {
@@ -13768,6 +13782,27 @@ textarea.form-control-lg {
   100% {
     transform: translateY(0px);
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2c2c2c;
 }
 
 html,

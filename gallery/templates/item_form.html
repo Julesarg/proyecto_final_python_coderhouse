@@ -1,0 +1,12 @@
+{% extends 'gallery_father.html' %}
+{% load static %}
+{% block changeblock2 %}
+
+<form action="" method="POST">{% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" , value="Send">
+  <button onclick="history.back()">Return</button>
+</form>
+
+{% endblock %}
+<!--falta hacerle el diseno-->
