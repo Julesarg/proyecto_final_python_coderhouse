@@ -3,38 +3,59 @@
 {% block changeblock2 %}
 
 <div class="list-container">
+
   <div class="list-container-textc">
-    <p>PAINTINGS LIST</p>
-    <button><a href="{% url 'add_item' %}">ADD NEW PRODUCT</a></button>
+    <div class="list-title-container">
+      <p>Paintings</p>
+
+      <button type="button" class="button">
+        <span class="button__text">ADD NEW
+        </span>
+        <span class="button__icon">
+          <a href="{% url 'add_item' %}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2"
+              stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
+              <line y2="19" y1="5" x2="12" x1="12"></line>
+              <line y2="12" y1="12" x2="19" x1="5"></line>
+            </svg>
+          </a>
+        </span>
+      </button>
+
+    </div>
   </div>
   <div class="list-container-cards">
     {% for item in object_list %}
     {% if item.item_genre == "Paintings" %}
-    <a href="{% url 'delete' item.id %}">Delete</a>
-    <a href="{% url 'edit' item.id %}">Edit</a>
-    <div class="card">
-      <div class="content">
-        <div class="back">
-          <div class="back-content">
-            <strong>{{item.item_name}}</strong>
-            <img src="{{STATIC_URL}}/media/{{item.item_image}}" alt="itemimage">
-            <strong>${{item.item_price}}</strong>
+    <div class="list-container-big">
+      <div class="buttons-container">
+        <a href="{% url 'delete' item.id %}">Delete</a>
+        <a href="{% url 'edit' item.id %}">Edit</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="back">
+            <div class="back-content">
+              <strong>{{item.item_name}}</strong>
+              <img src="{{STATIC_URL}}/media/{{item.item_image}}" alt="itemimage">
+              <strong>${{item.item_price}}</strong>
+            </div>
           </div>
-        </div>
-        <div class="front">
-          <div class="img">
-            <img src="{{STATIC_URL}}/media/{{item.item_image}}" alt="backcard">
-          </div>
-          <div class="front-content">
-            <div class="description">
-              <div class="title">
-                <p class="title">
-                  <strong>{{item.item_name}}</strong>
-                </p>
+          <div class="front">
+            <div class="img">
+              <img src="{{STATIC_URL}}/media/{{item.item_image}}" alt="backcard">
+            </div>
+            <div class="front-content">
+              <div class="description">
+                <div class="title">
+                  <p class="title">
+                    <strong>{{item.item_name}}</strong>
+                  </p>
+                </div>
+                <button class="button">
+                  <a href="{% url 'detail_item' item.id %}">Details</a>
+                </button>
               </div>
-              <button class="button">
-                <a href="{% url 'detail_item' item.id %}">Details</a>
-              </button>
             </div>
           </div>
         </div>
@@ -43,7 +64,10 @@
     {% endif %}
     {% endfor %}
   </div>
-  <button onclick="history.back()">Return</button>
+  <div class="buttonback-container">
+    <button class="buttonback" onclick="history.back()">
+      Back
+    </button>
+  </div>
 </div>
-
 {% endblock %}

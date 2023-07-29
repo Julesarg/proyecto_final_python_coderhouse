@@ -12418,8 +12418,6 @@ textarea.form-control-lg {
 
 .footer-container {
   margin-top: 100px;
-  padding-left: 100px;
-  padding-right: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -12559,9 +12557,7 @@ textarea.form-control-lg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px;
   height: 30vh;
-  margin: 50px 0 0 0;
 }
 .footer-container .footer-container_center .footer-container_center-down {
   display: flex;
@@ -12679,22 +12675,43 @@ textarea.form-control-lg {
   color: rgba(255, 255, 255, 0.5);
 }
 
+@media (max-width: 1280px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .footer-container .footer-container_left {
+    width: 400px;
+  }
+}
 @media (max-width: 576px) {
-  .footer-container_left_down {
+  .footer-container {
+    padding: 0 0 0 0;
+    width: 100%;
+  }
+  .footer-container .footer-container_left {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .footer-container .footer-container_left .footer-container_left_down {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  .footer-container_left_down .footer-container_main_list1 {
+  .footer-container .footer-container_left .footer-container_left_down .footer-container_main_list1 {
     width: 100% !important;
     justify-content: center !important;
     align-items: center !important;
   }
-  .footer-container_left_down .footer-container_main_list2 {
+  .footer-container .footer-container_left .footer-container_left_down .footer-container_main_list2 {
     width: 100% !important;
     justify-content: center !important;
     align-items: center !important;
     list-style: disc !important;
+  }
+  .footer-container .footer-container_center {
+    margin: 20px 0 20px 0;
   }
 }
 .welcome-container {
@@ -13483,10 +13500,84 @@ textarea.form-control-lg {
   justify-content: center;
   align-items: center;
 }
-.list-container .list-container-textc p {
+.list-container .list-container-textc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 0 0;
+}
+.list-container .list-container-textc .list-title-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.list-container .list-container-textc .list-title-container p {
   color: white;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.list-container .list-container-textc .list-title-container .button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid #b80081;
+  background-color: transparent;
+}
+.list-container .list-container-textc .list-title-container .button,
+.list-container .list-container-textc .list-title-container .button__icon,
+.list-container .list-container-textc .list-title-container .button__text {
+  transition: all 0.3s;
+}
+.list-container .list-container-textc .list-title-container .button .button__text {
+  transform: translateX(18px);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.list-container .list-container-textc .list-title-container .button .button__icon {
+  position: absolute;
+  transform: translateX(105px);
+  height: 100%;
+  width: 39px;
+  background-color: #b80081;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-container .list-container-textc .list-title-container .button .button__icon a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+}
+.list-container .list-container-textc .list-title-container .button .svg {
+  width: 30px;
+  stroke: #fff;
+}
+.list-container .list-container-textc .list-title-container .button:hover {
+  background: #b80081;
+}
+.list-container .list-container-textc .list-title-container .button:hover .button__text {
+  color: transparent;
+}
+.list-container .list-container-textc .list-title-container .button:hover .button__icon {
+  width: 143px;
+  transform: translateX(0);
+}
+.list-container .list-container-textc .list-title-container .button:active .button__icon {
+  background-color: #a10071;
+}
+.list-container .list-container-textc .list-title-container .button:active {
+  border: 1px solid #9e006f;
 }
 .list-container .list-container-cards {
   display: flex;
@@ -13498,14 +13589,34 @@ textarea.form-control-lg {
   justify-content: center;
   align-items: center;
 }
-.list-container .list-container-cards .card {
+.list-container .list-container-cards .list-container-big {
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+.list-container .list-container-cards .list-container-big .buttons-container a {
+  text-decoration: none;
+  color: white;
+  padding: 0 5px 0 5px;
+  transition: 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.list-container .list-container-cards .list-container-big .buttons-container a:hover {
+  color: rgb(219, 0, 110);
+}
+.list-container .list-container-cards .list-container-big .card {
   overflow: visible;
   width: 220px;
   height: 320px;
-  margin: 20px;
+  margin: 10px 20px 20px 20px;
   border-style: none;
 }
-.list-container .list-container-cards .card .content {
+.list-container .list-container-cards .list-container-big .card .content {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
@@ -13513,7 +13624,7 @@ textarea.form-control-lg {
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.9333333333);
   border-radius: 5px;
 }
-.list-container .list-container-cards .card .content .back {
+.list-container .list-container-cards .list-container-big .card .content .back {
   justify-content: center;
   display: flex;
   align-items: center;
@@ -13526,7 +13637,7 @@ textarea.form-control-lg {
   border-radius: 5px;
   overflow: hidden;
 }
-.list-container .list-container-cards .card .content .back .back-content {
+.list-container .list-container-cards .list-container-big .card .content .back .back-content {
   position: absolute;
   width: 99%;
   height: 99%;
@@ -13540,7 +13651,7 @@ textarea.form-control-lg {
   align-items: center;
   text-align: center;
 }
-.list-container .list-container-cards .card .content .back .back-content img {
+.list-container .list-container-cards .list-container-big .card .content .back .back-content img {
   display: block;
   min-width: 220px;
   max-width: 220px;
@@ -13551,7 +13662,7 @@ textarea.form-control-lg {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.list-container .list-container-cards .card .content .back::before {
+.list-container .list-container-cards .list-container-big .card .content .back::before {
   position: absolute;
   content: " ";
   display: block;
@@ -13560,7 +13671,7 @@ textarea.form-control-lg {
   background: linear-gradient(90deg, transparent, rgb(219, 23, 131), rgb(219, 23, 131), rgb(219, 23, 131), rgb(219, 23, 131), transparent);
   animation: rotation_481 5000ms infinite linear;
 }
-.list-container .list-container-cards .card .content .front {
+.list-container .list-container-cards .list-container-big .card .content .front {
   transform: rotateY(180deg);
   color: white;
   background-color: #151515;
@@ -13572,7 +13683,7 @@ textarea.form-control-lg {
   border-radius: 5px;
   overflow: hidden;
 }
-.list-container .list-container-cards .card .content .front .img {
+.list-container .list-container-cards .list-container-big .card .content .front .img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -13581,14 +13692,14 @@ textarea.form-control-lg {
   -o-object-position: center;
      object-position: center;
 }
-.list-container .list-container-cards .card .content .front .img img {
+.list-container .list-container-cards .list-container-big .card .content .front .img img {
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   filter: saturate(0%);
 }
-.list-container .list-container-cards .card .content .front .front-content {
+.list-container .list-container-cards .list-container-big .card .content .front .front-content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -13598,25 +13709,25 @@ textarea.form-control-lg {
   justify-content: flex-end;
   text-align: center;
 }
-.list-container .list-container-cards .card .content .front .front-content .description {
+.list-container .list-container-cards .list-container-big .card .content .front .front-content .description {
   width: 100%;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
 }
-.list-container .list-container-cards .card .content .front .front-content .description .title {
+.list-container .list-container-cards .list-container-big .card .content .front .front-content .description .title {
   font-size: 11px;
   max-width: 100%;
   display: flex;
   justify-content: center;
 }
-.list-container .list-container-cards .card .content .front .front-content .description .title p {
+.list-container .list-container-cards .list-container-big .card .content .front .front-content .description .title p {
   width: auto;
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   line-height: 1.4rem;
 }
-.list-container .list-container-cards .card .content .front .front-content .description .button {
+.list-container .list-container-cards .list-container-big .card .content .front .front-content .description .button {
   --bg: #000;
   border: 1px solid var(--bg);
   border-radius: 4px;
@@ -13624,22 +13735,22 @@ textarea.form-control-lg {
   background: var(--bg);
   transition: 0.2s;
 }
-.list-container .list-container-cards .card .content .front .front-content .description .button a {
+.list-container .list-container-cards .list-container-big .card .content .front .front-content .description .button a {
   text-decoration: none;
   color: #fff;
   display: flex;
 }
-.list-container .list-container-cards .card .content .front .front-content .description .button:hover {
+.list-container .list-container-cards .list-container-big .card .content .front .front-content .description .button:hover {
   color: #ffffff;
   transform: translate(-0.25rem, -0.25rem);
   background: rgb(219, 23, 131);
   box-shadow: 0.25rem 0.25rem var(--bg);
 }
-.list-container .list-container-cards .card .content .front .front-content .description .button:active {
+.list-container .list-container-cards .list-container-big .card .content .front .front-content .description .button:active {
   transform: translate(0);
   box-shadow: none;
 }
-.list-container .list-container-cards .card:hover .content {
+.list-container .list-container-cards .list-container-big .card:hover .content {
   transform: rotateY(180deg);
 }
 @keyframes rotation_481 {
@@ -13660,6 +13771,60 @@ textarea.form-control-lg {
   100% {
     transform: translateY(0px);
   }
+}
+.list-container .buttonback-container {
+  display: flex;
+  width: 90%;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: white;
+  justify-content: center;
+  padding: 10px 0 0 0;
+  margin: 50px 0 0 0;
+}
+.list-container .buttonback-container .buttonback {
+  position: relative;
+  height: 40px;
+  width: 120px;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: transparent;
+  transition: all 0.5s;
+  border: none;
+}
+.list-container .buttonback-container .buttonback::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  z-index: 1;
+}
+.list-container .buttonback-container .buttonback:hover::before {
+  opacity: 0;
+  transform: scale(0.7, 0.7);
+}
+.list-container .buttonback-container .buttonback::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+  border: 1px solid #ffffff;
+  transform: scale(1.2, 1.2);
+  opacity: 0;
+  z-index: 1;
+  text-align: center;
+}
+.list-container .buttonback-container .buttonback:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
 }
 
 .list-detail-container {
