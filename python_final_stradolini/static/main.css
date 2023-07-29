@@ -11984,6 +11984,9 @@ textarea.form-control-lg {
   flex-shrink: 0;
   flex-basis: auto;
 }
+.header .navbar .container-fluid, .header .navbar .container-sm, .header .navbar .container-md, .header .navbar .container-lg, .header .navbar .container-xl, .header .navbar .container-xxl {
+  width: 100vw;
+}
 .header .navbar .container-fluid .navbar-toggler .navbar-toggler-icon, .header .navbar .container-sm .navbar-toggler .navbar-toggler-icon, .header .navbar .container-md .navbar-toggler .navbar-toggler-icon, .header .navbar .container-lg .navbar-toggler .navbar-toggler-icon, .header .navbar .container-xl .navbar-toggler .navbar-toggler-icon, .header .navbar .container-xxl .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -13836,10 +13839,34 @@ textarea.form-control-lg {
   justify-content: center;
   align-items: center;
 }
-.list-detail-container .list-detail-container-textc p {
+.list-detail-container .list-container-textc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 0 0;
+}
+.list-detail-container .list-container-textc .list-title-container {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.list-detail-container .list-container-textc .list-title-container p {
   color: white;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.list-detail-container .list-container-textc .list-title-container .item-name {
+  font-weight: 300;
+  margin: 0 0 1rem 10px;
+  line-height: 2rem;
 }
 .list-detail-container .list-detail-container-cards {
   display: flex;
@@ -13891,6 +13918,9 @@ textarea.form-control-lg {
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-img {
   width: 50%;
@@ -13915,10 +13945,15 @@ textarea.form-control-lg {
   font-size: 2rem;
 }
 .list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc .p2 {
-  font-size: 1.5rem;
-}
-.list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc .p3 {
+  font-size: 1.3rem;
+  width: 90%;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.726);
+}
+.list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc strong {
+  margin: 0.5rem 0 0.5rem 0;
 }
 .list-detail-container .list-detail-container-cards .card .content .back::before {
   position: absolute;
@@ -13948,7 +13983,111 @@ textarea.form-control-lg {
     transform: translateY(0px);
   }
 }
+.list-detail-container .buttonback-container {
+  display: flex;
+  width: 90%;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: white;
+  justify-content: center;
+  padding: 10px 0 0 0;
+  margin: 50px 0 100px 0;
+}
+.list-detail-container .buttonback-container .buttonback {
+  position: relative;
+  height: 40px;
+  width: 120px;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: transparent;
+  transition: all 0.5s;
+  border: none;
+}
+.list-detail-container .buttonback-container .buttonback a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 10;
+}
+.list-detail-container .buttonback-container .buttonback::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  z-index: 1;
+}
+.list-detail-container .buttonback-container .buttonback:hover::before {
+  opacity: 0;
+  transform: scale(0.7, 0.7);
+}
+.list-detail-container .buttonback-container .buttonback::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+  border: 1px solid #ffffff;
+  transform: scale(1.2, 1.2);
+  opacity: 0;
+  z-index: 1;
+  text-align: center;
+}
+.list-detail-container .buttonback-container .buttonback:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
 
+@media (max-width: 576px) {
+  .list-detail-container .list-container-textc .list-title-container p {
+    font-size: 6vw;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .list-detail-container .list-container-textc .list-title-container .item-name {
+    font-weight: 300;
+    margin: 0 0 0.5rem 10px;
+    line-height: 1.5rem;
+  }
+  .list-detail-container .list-detail-container-cards .card {
+    height: 550px;
+  }
+  .list-detail-container .list-detail-container-cards .card .content .back .back-content {
+    flex-direction: column;
+  }
+  .list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-img {
+    height: auto;
+    width: 100%;
+    max-width: 90%;
+    max-height: 50%;
+    justify-content: center;
+  }
+  .list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc {
+    justify-content: flex-start;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
+  }
+  .list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc .p1 {
+    font-size: 1.5rem;
+  }
+  .list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc .p2 {
+    font-size: 1rem;
+  }
+  .list-detail-container .list-detail-container-cards .card .content .back .back-content .back-content-rightc strong {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

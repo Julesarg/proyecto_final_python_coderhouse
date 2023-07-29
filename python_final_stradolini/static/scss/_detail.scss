@@ -5,11 +5,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .list-detail-container-textc {
-    p {
-      color: white;
-      font-weight: 700;
-      font-size: 4rem;
+  .list-container-textc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0 0;
+    .list-title-container {
+      width: 90%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom-color: white;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      p {
+        color: white;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2rem;
+        user-select: none;
+      }
+      .item-name {
+        font-weight: 300;
+        margin: 0 0 1rem 10px;
+        line-height: 2rem;
+      }
     }
   }
   .list-detail-container-cards {
@@ -57,6 +77,7 @@
             justify-content: space-around;
             align-items: center;
             text-align: center;
+            user-select: none;
             .back-content-img {
               width: 50%;
               height: 100%;
@@ -78,10 +99,15 @@
                 font-size: 2rem;
               }
               .p2 {
-                font-size: 1.5rem;
-              }
-              .p3 {
+                font-size: 1.3rem;
+                width: 90%;
                 font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.726);
+              }
+              strong {
+                margin: 0.5rem 0 0.5rem 0;
               }
             }
           }
@@ -123,6 +149,126 @@
       }
       100% {
         transform: translateY(0px);
+      }
+    }
+  }
+  .buttonback-container {
+    display: flex;
+    width: 90%;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: white;
+    justify-content: center;
+    padding: 10px 0 0 0;
+    margin: 50px 0 100px 0;
+    .buttonback {
+      position: relative;
+      height: 40px;
+      width: 120px;
+      color: #ffffff;
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      background-color: transparent;
+      transition: all 0.5s;
+      border: none;
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 10;
+      }
+    }
+
+    .buttonback::before {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s;
+      z-index: 1;
+    }
+
+    .buttonback:hover::before {
+      opacity: 0;
+      transform: scale(0.7, 0.7);
+    }
+
+    .buttonback::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s;
+      border: 1px solid #ffffff;
+      transform: scale(1.2, 1.2);
+      opacity: 0;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .buttonback:hover::after {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .list-detail-container {
+    .list-container-textc {
+      .list-title-container {
+        p {
+          font-size: 6vw;
+          line-height: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+        .item-name {
+          font-weight: 300;
+          margin: 0 0 0.5rem 10px;
+          line-height: 1.5rem;
+        }
+      }
+    }
+    .list-detail-container-cards {
+      .card {
+        height: 550px;
+        .content {
+          .back {
+            .back-content {
+              flex-direction: column;
+              .back-content-img {
+                height: auto;
+                width: 100%;
+                max-width: 90%;
+                max-height: 50%;
+                justify-content: center;
+              }
+              .back-content-rightc {
+                justify-content: flex-start;
+                height: fit-content;
+                width: 80%;
+                .p1 {
+                  font-size: 1.5rem;
+                }
+                .p2 {
+                  font-size: 1rem;
+                }
+                strong {
+                  margin: 0.5rem 0 0.5rem 0;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -3,8 +3,11 @@
 {% block changeblock2 %}
 
 <div class="list-detail-container">
-  <div class="list-detail-container-textc">
-    <p>DETAIL</p>
+  <div class="list-container-textc">
+    <div class="list-title-container">
+      <p>{{item.item_genre}} /</p>
+      <p class="item-name">{{item.item_name}}</p>
+    </div>
   </div>
   <div class="list-detail-container-cards">
     <div class="card">
@@ -15,11 +18,10 @@
               <img src="{{STATIC_URL}}/media/{{item.item_image}}" alt="itemimage">
             </div>
             <div class="back-content-rightc">
-              <p class="p1">{{item.item_name}}</p>
-              <p class="p2">Price: ${{item.item_price}}</strong></p>
+              <!-- <p class="p1">{{item.item_name}}</p> -->
+              <p class="p1">Price: ${{item.item_price}}</strong></p>
               <strong>Quantity available: {{item.item_stock}}</strong>
-              <p class="p3">{{item.item_description}}</strong></p>
-              <strong>Art branch: {{item.item_genre}}</strong>
+              <p class="p2">"{{item.item_description}}"</strong></p>
               <strong>Material/s: {{item.item_material}}</strong>
             </div>
           </div>
@@ -27,9 +29,13 @@
       </div>
     </div>
   </div>
-  <div class="list-detail-container-backc">
-    <a href="{% url 'gallery_home' %}">Back to Gallery</a>
-    <button onclick="history.back()">Return</button>
+  <div class="buttonback-container">
+    <button class="buttonback" onclick="history.back()">
+      Return
+    </button>
+    <button class="buttonback">
+      <a href="{% url 'gallery_home' %}">Back to Gallery</a>
+    </button>
   </div>
 </div>
 {% endblock %}
