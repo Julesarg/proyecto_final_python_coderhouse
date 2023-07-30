@@ -3,11 +3,9 @@
 {% block changeblock2 %}
 
 <div class="list-container">
-
   <div class="list-container-textc">
     <div class="list-title-container">
       <p>Sculptures</p>
-
       <button type="button" class="button">
         <span class="button__text">ADD NEW
         </span>
@@ -21,9 +19,9 @@
           </a>
         </span>
       </button>
-
     </div>
   </div>
+
   <div class="list-container-cards">
     {% for item in object_list %}
     {% if item.item_genre == "Sculptures" %}

@@ -14,8 +14,8 @@ def search_fail(request):
     return render(request, 'gallery/search_fail.html')
 def add_success(request):
     return render(request, 'gallery/add_success.html')
-def modify_success(request):
-    return render(request, 'gallery/modify_success.html')
+# def modify_success(request):
+#     return render(request, 'gallery/modify_success.html')
 
 
 ##ADD ITEM OK##
@@ -79,7 +79,7 @@ def searchByMat(request):
         if item:
             return render(request, 'search_success.html', {'item': item, 'item_material': item_material})
         elif not item:
-            return render(request, 'search_fail.html')
+            return render(request, 'search_fail.html',{'item': item, 'item_material': item_material})
         else:            
             return render(request, 'gallery_home.html')
     else:
