@@ -3,7 +3,7 @@
 {% block changeblock4 %}
 
 <div class="main-container-login">
-  <form action="" class="form" method="" enctype="multipart/form-data">{% csrf_token %}
+  <form action="" class="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
     <div class="title">Hi there again, please Log in</div>
     <div class="form-row">
       <div class="form-group col-md-12 ">
@@ -20,16 +20,7 @@
           placeholder="type your password">
       </div>
     </div>
-
-    <div class="form-row">
-      <div class="form-group col-md-12 ">
-        <label for="id_password">Repeat Password</label>
-        <input type="password" class="form-control input" name="password" required="" id="id_password"
-          placeholder="repeat your password">
-      </div>
-    </div>
-
-    <button type="" class="btn btn-primary button" value="Send">
+    <button type="submit" class="btn btn-primary button">
       <span>Login</span>
     </button>
   </form>
