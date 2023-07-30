@@ -5,6 +5,8 @@ from gallery.models import *
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -23,6 +25,8 @@ def add_success(request):
 
 
 ##ADD ITEM OK##
+
+@login_required
 def add_item(request):
     if request.method == "POST":
         myForm = ItemForm(request.POST, request.FILES)
@@ -37,18 +41,22 @@ def add_item(request):
 
 
 ##LIST GENRES OK##
-class PaintingList(ListView):
+class PaintingList(ListView, LoginRequiredMixin):
     model = Item
     template_name = 'paintings.html'
+    
 class SculptureList(ListView):
     model = Item
     template_name = 'sculptures.html'
+
 class WoodMetalList(ListView):
     model = Item
     template_name = 'wood_and_metal.html'
+
 class NftList(ListView):
     model = Item
     template_name = 'digital_assets.html'
+
 class OtherList(ListView):
     model = Item
     template_name = 'other_craftings.html'
@@ -59,7 +67,8 @@ class ItemDetail(DetailView):
     template_name = 'detail_item.html'
 
 ##delete view##
-class ItemDelete(DeleteView):
+
+class ItemDelete(DeleteView,LoginRequiredMixin):
     model = Item
     success_url ="/gallery/"     
     template_name = "item_confirm_delete.html"

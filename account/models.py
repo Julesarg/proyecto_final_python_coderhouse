@@ -1,13 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-class User(models.Model):
-    name = models.CharField(max_length=25)
-    last_name = models.CharField(max_length=25)
-    username = models.CharField(max_length=15)
-    email = models.EmailField()
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.DO_NOTHING)
     age = models.IntegerField()
-    password = models.CharField(max_length=40, default="")
-
     gender_choices = (
       ('Male', 'Male'),
       ('Female','Female'),
@@ -18,4 +14,4 @@ class User(models.Model):
     avatar = models.ImageField(null=True, blank=True, upload_to="images/")
 
     def __str__(self):
-        return f'Name: {self.name}, Lastname: {self.last_name}, Username: {self.username}, Email: {self.email}, Age: {self.age},  Password: {self.password}, Gender: {self.gender}, Profile Pic: {self.avatar}'
+      return f'{self.user}, {self.age}, {self.gender}, {self.avatar}'

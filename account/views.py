@@ -1,29 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from account.forms import *
 from account.models import *
-from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 
 def account_home(request):
     return render(request, 'account_home.html')
+
 def profile(request):
     return render(request, 'profile.html')
-
-def signup(request):
-    if request.method == "POST":
-        myForm = UserForm(request.POST, request.FILES)
-        if myForm.is_valid():
-            inf = myForm.cleaned_data
-            user = User(name = inf['name'], last_name = inf['last_name'],username = inf['username'],email = inf['email'], age = inf['age'], password = inf['password'], gender = inf['gender'], avatar = inf['avatar'])
-            user.save()
-            messages.success(request, 'login.html', f'Welcome to our site {user.name.capitalize()} {user.last_name}, we are happy you joined!')
-        return render(request, 'login.html', {'myText':f'{myForm.as_p()}'})
-    else:
-        myForm = UserForm()
-    return render(request, 'signup.html', {'myForm': myForm})
-
-
 
 def login_request(request):
     if request.method == "POST":
@@ -38,8 +23,22 @@ def login_request(request):
                 login(request, user)
                 return render(request, 'login_success.html',  {'form': form})
             else:
-                return render(request, 'login_success.html',  {'form': form} )
+                return render(request, 'login_error.html',  {'form': form} )
         else:
-            return render(request, 'login_success.html',  {'form': form})
+            return render(request, 'login_error.html',  {'form': form})
     form = AuthenticationForm()
     return render (request, 'login.html', {'form': form})
+
+def register(request):
+    if request.method == "POST":
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            form.save()
+            # user = form.save()
+            # login(request, user)
+            # return redirect('/index_home')
+        return render(request, 'register_success.html', {'form': form})
+    else:
+        form = UserRegisterForm()
+    return render(request, 'register.html', {'form': form})

@@ -4,14 +4,9 @@
 
 <div class="welcome-container">
   <div class="welcome-container-top">
-    {% if messages %}
-    {% for message in messages%}
-    <p>{{ message }}</p>
-    {% endfor %}
-    {% endif %}
   </div>
   <div class="welcome-container-bottom">
-    <p>What about getting started?</p>
+    <p>Hi there! Welcome to the community {{user.username}} What about getting started?</p>
     <div class="welcome-container-bottom_buttons">
       <button>
         <a href="{% url 'gallery_home' %}">
@@ -22,7 +17,7 @@
         </div>
       </button>
       <button>
-        <a href="{% url 'add_p' %}">
+        <a href="{% url 'add_item' %}">
           Add new Item
         </a>
         <div class="arrow-wrapper">

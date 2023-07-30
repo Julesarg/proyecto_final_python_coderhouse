@@ -1,0 +1,19 @@
+{% extends 'account_father.html' %}
+{% load static %}
+{% block changeblock4 %}
+
+<div class="welcome-container">
+  <div class="welcome-container-top">
+    {% if messages %}
+    {% for message in messages%}
+    <p>{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+  </div>
+  <div class="welcome-container-bottom">
+    <p>Something went wrong with your credentials, check again D:</p>
+    <div class="welcome-container-bottom_buttons">
+    </div>
+  </div>
+</div>
+{% endblock %}
