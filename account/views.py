@@ -3,12 +3,37 @@ from account.forms import *
 from account.models import *
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def edit_profile(request):
+    usuario = request.user
+    if request.method == 'POST':
+        form = UserEditForm(request.POST)
+        if form.is_valid():
+
+            data = form.cleaned_data
+
+            usuario.email = data['email']
+            usuario.password1 = data['password1']
+            usuario.password2 = data['password2']
+            usuario.first_name = data['first_name']
+            usuario.last_name = data['last_name']
+            usuario.save()
+            return render(request, 'profile.html')
+    else:
+        form = UserEditForm(initial={'first_name': usuario.first_name, 'last_name': usuario.last_name, 'email': usuario.email})
+
+    return render(request, 'edit_profile.html', {'form': form, 'usuario': usuario})
 
 def account_home(request):
     return render(request, 'account_home.html')
 
 def profile(request):
     return render(request, 'profile.html')
+
+
+
 
 def login_request(request):
     if request.method == "POST":
