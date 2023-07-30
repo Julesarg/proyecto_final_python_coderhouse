@@ -7,6 +7,10 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
 
 
+
+# def custom_404(request, exception):
+#     return render(request, 'custom_404.html', status=404)
+
 ## normal views##
 def gallery_home(request):
     return render(request, 'gallery_home.html')
