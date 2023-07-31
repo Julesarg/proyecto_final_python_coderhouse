@@ -5,10 +5,8 @@ urlpatterns = [
     path('', views.gallery_home, name='gallery_home'),
     path('search_success/', views.searchByMat, name = 'search_success'),
     path('add_success/', views.add_success, name='add_success'),
-    # path('modify_success/', views.modify_success, name='modify_success'),
     path('search_fail', views.search_fail, name='search_fail'),
     path('add_item', views.add_item, name='add_item'),
-
     path('paintings/list', views.PaintingList.as_view(), name='paintings'),
     path('sculptures/list', views.SculptureList.as_view(), name='sculptures'),
     path('wood_and_metal/list', views.WoodMetalList.as_view(), name='wood_and_metal'),

@@ -51,15 +51,6 @@ def edit_profile(request):
     return render(request, 'edit_profile.html', {'form': form, 'usuario': usuario,'url': avatars[0].avatar.url})
 
 
-
-
-
-
-
-
-
-
-
 def login_request(request):
     if request.method == "POST":
         form = AuthenticationForm(request, data = request.POST)

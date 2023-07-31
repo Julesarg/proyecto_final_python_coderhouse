@@ -28,8 +28,10 @@
     {% if item.item_genre == "Handcraft (Wood, Metal, etc)" %}
     <div class="list-container-big">
       <div class="buttons-container">
+        {% if request.user.is_superuser %}
         <a href="{% url 'delete' item.id %}">Delete</a>
         <a href="{% url 'edit' item.id %}">Edit</a>
+        {% endif %}
       </div>
       <div class="card">
         <div class="content">
