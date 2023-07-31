@@ -1,0 +1,13 @@
+{% extends 'account_father.html' %}
+{% load static %}
+{% block changeblock4 %}
+
+
+<form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+
+  {{form.as_p}}
+
+  <input type="submit" value="enviar">
+</form>
+
+{% endblock %}
