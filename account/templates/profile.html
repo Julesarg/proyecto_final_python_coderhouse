@@ -1,9 +1,25 @@
 {% extends 'account_father.html' %}
 {% load static %}
 {% block changeblock4 %}
-<h1>MAIN PROFILE VIEW - IN ACCOUNT</h1>
+
+<h1>Welcome to your profile main site, what would you like to do {{user.first_name}}?</h1>
+
+{% if request.user.is_authenticated %}
+{{id_user.user.first_name}}
+{{id_user.user.last_name}}
+{{id_user.user.email}}
+{{id_user.age}}
+{{id_user.gender}}
+
+{% if id_user.avatar %}
+<img src="{{id_user.avatar.url}}" alt="profilepic">
+{% else %}
+<img src="{{STATIC_URL}}/static/imgs/defaultimg.jpg" alt="defaultimg">
+{% endif %}
+
 <div>
-  <a href="{% url 'edit_profile' %}">EDIT PROFILE</a>
+  <a href="{% url 'edit_profile' user.profile.id %}">EDIT PROFILE</a>
 </div>
+{% endif %}
 
 {% endblock %}

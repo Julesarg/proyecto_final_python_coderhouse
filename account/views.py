@@ -1,54 +1,55 @@
+from typing import Any, Dict
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 from account.forms import *
 from account.models import *
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
-
-## home de account, no tiene nada##
-def account_home(request):
-    return render(request, 'account_home.html')
+from django.views import generic
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import UpdateView
+from django.shortcuts import get_object_or_404
 
 ## perfil ##
-@login_required
-def profile(request):    
-    return render(request, 'profile.html')
 
-## editar foto de perfil##
-@login_required
-def edit_avatar(request):
-    if request.method == 'POST':
-        form = AvatarForm(request.POST, request.FILES)
-        if form.is_valid():
-            user = User.objects.get(username=request.user)
-            avatar = Avatar(user=user, avatar=form.cleaned_data['avatar'])
-            avatar.save()
-            return render(request, 'edit_profile.html')
-    else:
-        form = AvatarForm()
-    return render(request, 'edit_avatar.html', {'form':form})
+## CODIGO PARA VER USUARIO##
+class ProfileView(DetailView):
+    model = Profile
+    template_name = 'profile.html'
+    def get_context_data(self, *args, **kwargs):
+        context = super(ProfileView, self).get_context_data(*args, **kwargs)
+        id_user = get_object_or_404(Profile, id=self.kwargs['pk'])
+        context['id_user'] = id_user
+        return context
+
+class EditProfileView(generic.UpdateView):
+    model = Profile
+    template_name = 'edit_profile.html'
+    fields = ['age', 'gender', 'avatar']
+    success_url = 'profile'
+ 
 
 
 ##editar perfil##
-@login_required
-def edit_profile(request):
-    avatars = Avatar.objects.filter(user=request.user.id)
-    usuario = request.user
-    if request.method == 'POST':
-        form = UserEditForm(request.POST)
-        if form.is_valid():
-            data = form.cleaned_data
-            usuario.first_name = data['first_name']
-            usuario.last_name = data['last_name']          
-            usuario.email = data['email']
-            usuario.password1 = data['password1']
-            usuario.password2 = data['password2'] 
-            usuario.save()
-            return render(request, 'profile.html')
-    else:
-        form = UserEditForm(initial={'first_name': usuario.first_name, 'last_name': usuario.last_name, 'email': usuario.email})
+# @login_required
+# def edit_profile(request):
+#     usuario = request.user
+#     if request.method == 'POST':
+#         form = UserEditForm(request.POST)
+#         if form.is_valid():
+#             data = form.cleaned_data
+#             usuario.first_name = data['first_name']
+#             usuario.last_name = data['last_name']          
+#             usuario.email = data['email']
+#             usuario.password1 = data['password1']
+#             usuario.password2 = data['password2'] 
+#             usuario.save()
+#             return render(request, 'profile.html')
+#     else:
+#         form = UserEditForm(initial={'first_name': usuario.first_name, 'last_name': usuario.last_name, 'email': usuario.email})
 
-    return render(request, 'edit_profile.html', {'form': form, 'usuario': usuario,'url': avatars[0].avatar.url})
+#     return render(request, 'edit_profile.html', {'form': form, 'usuario': usuario})
 
 
 def login_request(request):
@@ -78,9 +79,6 @@ def register(request):
         if form.is_valid():
             username = form.cleaned_data['username']
             form.save()
-            # user = form.save()
-            # login(request, user)
-            # return redirect('/index_home')
         return render(request, 'register_success.html', {'form': form})
     else:
         form = UserRegisterForm()

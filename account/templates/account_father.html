@@ -77,7 +77,7 @@
                 <a class="cta_link2" href="{% url 'register' %}">signup</a>
                 {% endif %}
                 {% if request.user.is_authenticated %}
-                <a class="cta_link1" href="{% url 'profile' %}">Profile |</a>
+                <a class="cta_link1" href="{% url 'profile' user.profile.id %}">Profile |</a>
                 <a class="cta_link2" href="{% url 'logout' %}">logout</a>
                 {% endif %}
                 <button class="cta">
@@ -112,7 +112,13 @@
           </ul>
           <ul class="footer-container_main_list2">
             <li class="footer-container_text"><a href="{% url 'about' %}">About Us</a></li>
-            <li class="footer-container_text"><a href="{% url 'profile' %}">My Profile</a></li>
+            {% if request.user.is_authenticated %}
+            <li class="footer-container_text"><a href="{% url 'profile' user.profile.id %}">My Profile</a></li>
+            {% endif %}
+            {% if not request.user.is_authenticated %}
+            <li class="footer-container_text"><a href="{% url 'login' %}">My Profile</a></li>
+            {% endif %}
+            <li class="footer-container_text"><a href="{% url 'message' %}">Message Us</a></li>
           </ul>
         </div>
       </div>
