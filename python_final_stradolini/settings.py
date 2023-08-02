@@ -78,23 +78,23 @@ WSGI_APPLICATION = 'python_final_stradolini.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-DATABASES= {
+DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'julianarg$entregafinaldb',
-    'USER': 'julianarg',
-    'PASSWORD': 'python2023',
-    'HOST':'julianarg.mysql.pythonanywhere-services.com',
-    'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-}
+
+# DATABASES= {
+#     'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#     'NAME': 'julianarg$entregafinaldb',
+#     'USER': 'julianarg',
+#     'PASSWORD': 'python2023',
+#     'HOST':'julianarg.mysql.pythonanywhere-services.com',
+#     'PORT': '3306',
+# }
+# }
 
 
 # Password validation

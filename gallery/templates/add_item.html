@@ -7,7 +7,9 @@
 {% endif %}
 <div class="main-container-add_item">
   <form action="" class="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
-    <div class="title">Add new item to library</div>
+    <div class="title">
+      <p>Add new item to library</p>
+    </div>
     <div class="form-row">
       <div class="form-group col-md-12 ">
         <label for="id_item_created">Creation date</label>
@@ -68,9 +70,14 @@
         </select>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary button" value="Send">
-      <span>Add now</span>
-    </button>
+    <div class="buttons">
+      <button type="submit" class="btn btn-primary button" value="Send">
+        <span>Add</span>
+      </button>
+      <button onclick="history.back()" class="btn btn-primary button">
+        <a class="button-return-add_a" href="{% url 'gallery_home' %}">Cancel</a>
+      </button>
+    </div>
 
     <!--script para poder autoagregar fecha en el form-->
     <script>
@@ -78,9 +85,7 @@
       document.querySelector("#id_item_created").value = item_created;
     </script>
   </form>
-  <button class="button-return-add" onclick="history.back()" class="btn btn-primary button">
-    <span>Cancel</span>
-  </button>
+
 </div>
 
 {% endblock %}

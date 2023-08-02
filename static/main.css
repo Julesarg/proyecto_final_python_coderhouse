@@ -14343,10 +14343,6 @@ textarea.form-control-lg {
 .modifications-container .main-container-add_item .form {
   background-color: black;
   border-radius: 20px;
-  border-bottom-style: solid;
-  border-right-style: solid;
-  border-bottom-color: rgba(207, 0, 114, 0.7);
-  border-right-color: rgba(207, 0, 114, 0.7);
   box-sizing: border-box;
   height: -moz-fit-content;
   height: fit-content;
@@ -14406,6 +14402,8 @@ textarea.form-control-lg {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 0 20px 0;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(207, 0, 114, 0.7);
 }
 .modifications-container .main-container-add_item .form .form-row {
   display: flex;
@@ -14533,43 +14531,14 @@ textarea.form-control-lg {
   right: 0;
   opacity: 1;
 }
-.modifications-container .button-return-add {
-  margin-top: 20px;
-  background: #000000;
-  border: solid rgba(207, 0, 114, 0.9);
-  padding: 10px 20px;
+.modifications-container .button-return-add_a {
+  text-decoration: none;
   display: inline-block;
   font-size: 15px;
+  z-index: 10;
   color: white;
   font-weight: 600;
-  width: 160px;
   text-transform: uppercase;
-  cursor: pointer;
-  transform: skew(-21deg);
-}
-.modifications-container span {
-  display: inline-block;
-  transform: skew(21deg);
-}
-.modifications-container .button-return-add::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 100%;
-  left: 0;
-  background: rgba(207, 0, 114, 0.9);
-  opacity: 0;
-  z-index: -1;
-  transition: all 0.5s;
-}
-.modifications-container .button-return-add:hover {
-  color: #fff;
-}
-.modifications-container .button-return-add:hover::before {
-  left: 0;
-  right: 0;
-  opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -14800,44 +14769,6 @@ textarea.form-control-lg {
   color: #fff;
 }
 .modifications-container .main-container-edit_item .form .button:hover::before {
-  left: 0;
-  right: 0;
-  opacity: 1;
-}
-.modifications-container .button-return {
-  margin-top: 20px;
-  background: #000000;
-  border: solid rgba(0, 247, 255, 0.7);
-  padding: 10px 20px;
-  display: inline-block;
-  font-size: 15px;
-  color: white;
-  font-weight: 600;
-  width: 160px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transform: skew(-21deg);
-}
-.modifications-container span {
-  display: inline-block;
-  transform: skew(21deg);
-}
-.modifications-container .button-return::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 100%;
-  left: 0;
-  background: rgba(0, 247, 255, 0.7);
-  opacity: 0;
-  z-index: -1;
-  transition: all 0.5s;
-}
-.modifications-container .button-return:hover {
-  color: #fff;
-}
-.modifications-container .button-return:hover::before {
   left: 0;
   right: 0;
   opacity: 1;
