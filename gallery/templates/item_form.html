@@ -2,11 +2,91 @@
 {% load static %}
 {% block changeblock2 %}
 
-<form action="" method="POST">{% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" , value="Send">
-  <button onclick="history.back()">Return</button>
-</form>
+<div class="main-container-edit_item">
+  <form action="" class="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <div class="title">
+      <p>Edit item / {{item.item_name}}</p>
+    </div>
+    <div class="form-row">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6 ">
+        <label for="id_item_name">Art Title</label>
+        <input type="text" class="form-control input" id="id_item_name" value="{{item.item_name}}" name="item_name"
+          maxlength="25" required="" placeholder="item title">
+      </div>
+      <div class="form-group col-md-3 ">
+        <label for="id_item_stock">Stock</label>
+        <input type="number" class="form-control input" min="-999" max="9999" value="{{item.item_stock}}"
+          name="item_stock" value="1" required="" id="id_item_stock" placeholder="">
+      </div>
+      <div class="form-group col-md-3 ">
+        <label for="id_item_price">Price</label>
+        <input type="number" class="form-control input" name="item_price" value="{{item.item_price}}" id="id_item_price"
+          required="" placeholder="state a price">
+      </div>
+    </div>
+    <div class="form-group col-md-12 description">
+      <label for="id_item_description">Item Description</label>
+      <textarea class="form-control input" Name="item_description" maxlength="200" required="" id="id_item_description"
+        placeholder="brief about your item" rows="3">
+        {{item.item_description}}</textarea>
+    </div>
 
+    <div class="form-row form-row-image">
+      <!-- <div class="form-group col-md-4 form-group-image-container">
+        <img src="{{item.item_image.url}}">
+      </div> -->
+      <div class="form-group col-md-8">
+        <label for="id_item_image">Image</label>
+        <input type="file" class="form-control-file form-control input" name="item_image" accept="image/*"
+          id="id_item_image">
+      </div>
+    </div>
+
+
+
+    <div class="form-row">
+      <div class="form-row form-radio col-md-4">
+        <label for="id_item_genre">Item Genre</label>
+        <select class="form-check" name="item_genre" id="id_item_genre">
+          <option value="{{item.item_genre}}" selected="">--------</option>
+          <option value="Paintings">Paintings</option>
+          <option value="Sculptures">Sculptures</option>
+          <option value="Nfts">Nfts</option>
+          <option value="Handcraft (Wood, Metal, etc)">Handcraft (Wood, Metal, etc)</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-row form-radio col-md-4">
+        <label for="id_item_material">Item material</label>
+        <select class="form-check" name="item_material" id="id_item_material">
+          <option value="{{item.item_material}}" selected="">--------</option>
+          <option value="Digital Asset">Digital Asset</option>
+          <option value="Wood">Wood</option>
+          <option value="Stone">Stone</option>
+          <option value="Metal">Metal</option>
+          <option value="Canvas &amp; Paint">Canvas &amp; Paint</option>
+          <option value="Ceramics">Ceramics</option>
+          <option value="Clay">Clay</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="buttons">
+      <button type="submit" class="btn btn-primary button" value="Send">
+        <span>Update</span>
+      </button>
+      <button onclick="history.back()" class="btn btn-primary button">
+        <span>Cancel</span>
+      </button>
+    </div>
+
+    <!--script para poder autoagregar fecha en el form-->
+    <script>
+      let item_created = new Date().toISOString().substr(0, 10);
+      document.querySelector("#id_item_created").value = item_created;
+    </script>
+  </form>
+</div>
 {% endblock %}
-<!--falta hacerle el diseno-->

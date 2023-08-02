@@ -2,19 +2,85 @@
 {% load static %}
 {% block changeblock2 %}
 
-<h3>Add Item Here</h3>
-<!--carga de form-->
 {% if myForm.errors %}
 <p>ERROR</p>
 {% endif %}
-<form action="" method="POST" class="form-container_inner" enctype="multipart/form-data">{% csrf_token %}
-  <table class="table table-hover table-dark">
-    {{myForm.as_table}}
-  </table>
-  <input type="submit" class="btn btn-success" value="Send">
-  <button onclick="history.back()">Return</button>
-</form>
+<div class="main-container-add_item">
+  <form action="" class="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <div class="title">Add new item to library</div>
+    <div class="form-row">
+      <div class="form-group col-md-12 ">
+        <label for="id_item_created">Creation date</label>
+        <input class="form-control input" type="date" name="item_created" id="id_item_created" required="" value="">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6 ">
+        <label for="id_item_name">Art Title</label>
+        <input type="text" class="form-control input" id="id_item_name" name="item_name" maxlength="25" required=""
+          placeholder="item title">
+      </div>
+      <div class="form-group col-md-3 ">
+        <label for="id_item_stock">Stock</label>
+        <input type="number" class="form-control input" min="-999" max="9999" name="item_stock" value="1" required=""
+          id="id_item_stock" placeholder="">
+      </div>
+      <div class="form-group col-md-3 ">
+        <label for="id_item_price">Price</label>
+        <input type="number" class="form-control input" name="item_price" id="id_item_price" required=""
+          placeholder="state a price">
+      </div>
+    </div>
+    <div class="form-group col-md-12 description">
+      <label for="id_item_description">Item Description</label>
+      <textarea class="form-control input" Name="item_description" maxlength="200" required="" id="id_item_description"
+        placeholder="brief about your item" rows="3"></textarea>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="id_item_image">Image</label>
+        <input type="file" class="form-control-file form-control input" name="item_image" accept="image/*"
+          id="id_item_image">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-row form-radio col-md-4">
+        <label for="id_item_genre">Item Genre</label>
+        <select class="form-check" name="item_genre" id="id_item_genre">
+          <option value="Paintings">Paintings</option>
+          <option value="Sculptures">Sculptures</option>
+          <option value="Nfts">Nfts</option>
+          <option value="Handcraft (Wood, Metal, etc)">Handcraft (Wood, Metal, etc)</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-row form-radio col-md-4">
+        <label for="id_item_material">Item material</label>
+        <select class="form-check" name="item_material" id="id_item_material">
+          <option value="Digital Asset">Digital Asset</option>
+          <option value="Wood">Wood</option>
+          <option value="Stone">Stone</option>
+          <option value="Metal">Metal</option>
+          <option value="Canvas &amp; Paint">Canvas &amp; Paint</option>
+          <option value="Ceramics">Ceramics</option>
+          <option value="Clay">Clay</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary button" value="Send">
+      <span>Add now</span>
+    </button>
+
+    <!--script para poder autoagregar fecha en el form-->
+    <script>
+      let item_created = new Date().toISOString().substr(0, 10);
+      document.querySelector("#id_item_created").value = item_created;
+    </script>
+  </form>
+  <button class="button-return-add" onclick="history.back()" class="btn btn-primary button">
+    <span>Cancel</span>
+  </button>
+</div>
 
 {% endblock %}
-
-<!--falta diseno-->

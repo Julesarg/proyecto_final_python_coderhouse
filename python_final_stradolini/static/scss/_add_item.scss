@@ -1,0 +1,254 @@
+.modifications-container {
+  .main-container-add_item {
+    display: flex;
+    width: 100vw;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 75px 0 0 0;
+    .form {
+      background-color: black;
+      border-radius: 20px;
+      border-bottom-style: solid;
+      border-right-style: solid;
+      border-bottom-color: rgba(207, 0, 114, 0.7);
+      border-right-color: rgba(207, 0, 114, 0.7);
+      box-sizing: border-box;
+      height: fit-content;
+      padding: 20px;
+      .description {
+        margin: 0 0 1.5rem 0;
+        label {
+          color: white;
+          margin: 0 0 5px 0;
+        }
+        .input {
+          background-color: rgba(21, 21, 21, 0.8);
+          border-radius: 12px;
+          border: 0;
+          color: #eee;
+          font-size: 18px;
+          height: 100%;
+          outline: 0;
+          padding: 4px 20px 0;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        input[type="number"] {
+          -moz-appearance: textfield;
+          appearance: textfield;
+        }
+        .form-control::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+          font-style: italic;
+        }
+        .form-control:focus {
+          box-shadow: 0 0 0 0.25rem rgba(207, 0, 114, 0.7);
+        }
+        .form-control-file {
+          margin: 0 0 0 0;
+          padding: 12px 0 0 30px;
+        }
+        .form-control::file-selector-button {
+          background-color: rgba(21, 21, 21, 0.8);
+          color: rgba(255, 255, 255, 0.788);
+        }
+      }
+      .title {
+        font-size: 2rem;
+        line-height: 2rem;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        width: fit-content;
+        margin: 0 0 20px 0;
+      }
+      .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        padding-left: 0;
+        margin: 0 -5px 20px -5px;
+        justify-content: space-around;
+
+        .form-group {
+          padding-right: 5px;
+          padding-left: 5px;
+          margin-bottom: 2rem;
+          height: 50px;
+          position: relative;
+          label {
+            color: white;
+            margin: 0 0 5px 0;
+          }
+          .input {
+            background-color: rgba(21, 21, 21, 0.8);
+            border-radius: 12px;
+            border: 0;
+            color: #eee;
+            font-size: 18px;
+            height: 100%;
+            outline: 0;
+            padding: 4px 20px 0;
+          }
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          input[type="number"] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+          }
+          .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+          }
+          .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(207, 0, 114, 0.7);
+          }
+          .form-control-file {
+            margin: 0 0 0 0;
+            padding: 12px 0 0 30px;
+          }
+          .form-control::file-selector-button {
+            background-color: rgba(21, 21, 21, 0.8);
+            color: rgba(255, 255, 255, 0.788);
+          }
+        }
+      }
+      //radio options
+      .form-radio {
+        flex-direction: column;
+        margin-bottom: 20px;
+        label {
+          color: white;
+          margin: 0 0 5px 0;
+        }
+        .form-check {
+          display: flex;
+          flex-direction: column;
+          background-color: rgba(21, 21, 21, 0.8);
+          border-radius: 12px;
+          border: 0;
+          color: #eee;
+          font-size: 18px;
+          height: 100%;
+          outline: 0;
+          padding: 5px 0 5px 40px;
+          margin: 0 0 0 0;
+          .form-check-label {
+            color: rgba(255, 255, 255, 0.788);
+            .form-check-input:checked {
+              background-color: rgba(207, 0, 114, 0.7);
+              border-color: rgba(207, 0, 114, 0.7);
+            }
+            .form-check-input:focus {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+      .button {
+        background: #000000;
+        border: solid rgba(207, 0, 114, 0.9);
+        padding: 10px 20px;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 600;
+        width: 160px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transform: skew(-21deg);
+      }
+      span {
+        display: inline-block;
+        // transform: skew(21deg);
+      }
+      .button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        left: 0;
+        background: rgba(207, 0, 114, 0.9);
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.5s;
+      }
+
+      .button:hover {
+        color: #fff;
+      }
+
+      .button:hover::before {
+        left: 0;
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+  .button-return-add {
+    margin-top: 20px;
+    background: #000000;
+    border: solid rgba(207, 0, 114, 0.9);
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    width: 160px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+  }
+  span {
+    display: inline-block;
+    // transform: skew(21deg);
+  }
+  .button-return-add::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgba(207, 0, 114, 0.9);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  .button-return-add:hover {
+    color: #fff;
+  }
+  .button-return-add:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .modifications-container {
+    .main-container-add_item {
+      .form {
+        .form-group {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .modifications-container {
+    .main-container-add_item {
+      .form {
+        width: 90vw;
+      }
+    }
+  }
+}

@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.urls import reverse_lazy
 from gallery.forms import *
 from gallery.models import *
 from django.views.generic import ListView
@@ -7,9 +6,6 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import UpdateView,DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-import string
-import random
-
 
 ## back button ##
 def on_backbutton_clicked(self, widget):
@@ -25,7 +21,6 @@ def search_fail(request):
 def add_success(request):
     return render(request, 'gallery/add_success.html')
 
-
 ## ADD ITEM OK ##
 @login_required
 def add_item(request):
@@ -33,18 +28,12 @@ def add_item(request):
         myForm = ItemForm(request.POST, request.FILES)
         if myForm.is_valid():
             inf = myForm.cleaned_data
-            KEY_LEN = 20
-            keylistNombre = [random.choice((string.ascii_letters + string.digits)) for i in range(KEY_LEN)]
-            nombrePrueba = "".join(keylistNombre)
-            print(f'---------> Prueba con : {nombrePrueba}')
             item = Item(item_name = inf['item_name'], item_created = inf['item_created'],item_price = inf['item_price'],item_description = inf['item_description'],item_genre = inf['item_genre'], item_material = inf['item_material'], item_image = inf['item_image'], item_stock = inf['item_stock'] )
             item.save()
         return render(request, 'add_success.html', {'myText':f'{myForm.as_p()}', 'item':item})
     else:
         myForm = ItemForm()
     return render(request, 'add_item.html', {'myForm': myForm})
-
-
 
 ## LIST GENRES OK ##
 class PaintingList(LoginRequiredMixin,ListView):
@@ -97,7 +86,7 @@ class ItemUpdate(LoginRequiredMixin,UpdateView):
     model = Item
     success_url = '/gallery/'
     template_name = 'item_form.html'
-    fields = ['item_name','item_created', 'item_price', 'item_description', 'item_image', 'item_stock', 'item_genre', 'item_material']
+    fields = ['item_name','item_price', 'item_description', 'item_image', 'item_stock', 'item_genre', 'item_material']
     login_url = '../../account/login'
     redirect_field_name = 'redirect_to'
 
@@ -116,5 +105,3 @@ def searchByMat(request):
     else:
         # return redirect('../errorMessage')
         return render(request, 'gallery.html')
-    
-##FALTAN VISTAS DE ERROR##

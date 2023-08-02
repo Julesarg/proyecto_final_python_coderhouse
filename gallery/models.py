@@ -3,11 +3,11 @@ import datetime
 
 class Item(models.Model):
     item_name = models.CharField(max_length=25)
-    item_created = models.DateField(("Date"), default=datetime.date.today)
+    item_created = models.DateField(default=datetime.date.today)
     item_price = models.IntegerField()
-    item_description = models.CharField(max_length=999)
+    item_description = models.CharField(max_length=200)
     item_image = models.ImageField(null=True, blank=True, upload_to="images/")
-    item_stock = models.PositiveSmallIntegerField()
+    item_stock = models.IntegerField()
 
     genre_choices = (
     ('Paintings', 'Paintings'),

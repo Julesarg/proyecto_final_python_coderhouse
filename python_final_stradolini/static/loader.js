@@ -15,5 +15,5 @@ function executeLoader_gallery() {
 //profile & about loader//
 let variable3;
 function executeLoader_short() {
-  variable2 = setTimeout(showPage,2000);
+  variable3 = setTimeout(showPage,2000);
 }
