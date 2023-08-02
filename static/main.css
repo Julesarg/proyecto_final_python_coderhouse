@@ -12036,6 +12036,12 @@ textarea.form-control-lg {
   margin: 0;
   padding: 0;
 }
+.header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .superuser_opt, .header .navbar .container-sm .navbar-collapse .navbar-nav .nav-item .superuser_opt, .header .navbar .container-md .navbar-collapse .navbar-nav .nav-item .superuser_opt, .header .navbar .container-lg .navbar-collapse .navbar-nav .nav-item .superuser_opt, .header .navbar .container-xl .navbar-collapse .navbar-nav .nav-item .superuser_opt, .header .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item .superuser_opt {
+  color: rgba(46, 174, 9, 0.7);
+}
+.header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .superuser_opt:hover, .header .navbar .container-sm .navbar-collapse .navbar-nav .nav-item .superuser_opt:hover, .header .navbar .container-md .navbar-collapse .navbar-nav .nav-item .superuser_opt:hover, .header .navbar .container-lg .navbar-collapse .navbar-nav .nav-item .superuser_opt:hover, .header .navbar .container-xl .navbar-collapse .navbar-nav .nav-item .superuser_opt:hover, .header .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item .superuser_opt:hover {
+  color: rgb(46, 174, 9);
+}
 .header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item-button, .header .navbar .container-sm .navbar-collapse .navbar-nav .nav-item-button, .header .navbar .container-md .navbar-collapse .navbar-nav .nav-item-button, .header .navbar .container-lg .navbar-collapse .navbar-nav .nav-item-button, .header .navbar .container-xl .navbar-collapse .navbar-nav .nav-item-button, .header .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item-button {
   margin: 0 10px 0 10px;
   color: rgba(0, 0, 0, 0.6) !important;
@@ -12084,6 +12090,9 @@ textarea.form-control-lg {
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
+}
+.header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item-button-admin:after, .header .navbar .container-sm .navbar-collapse .navbar-nav .nav-item-button-admin:after, .header .navbar .container-md .navbar-collapse .navbar-nav .nav-item-button-admin:after, .header .navbar .container-lg .navbar-collapse .navbar-nav .nav-item-button-admin:after, .header .navbar .container-xl .navbar-collapse .navbar-nav .nav-item-button-admin:after, .header .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item-button-admin:after {
+  background-color: rgb(46, 174, 9);
 }
 .header .navbar .container-fluid .navbar-collapse .cta-container, .header .navbar .container-sm .navbar-collapse .cta-container, .header .navbar .container-md .navbar-collapse .cta-container, .header .navbar .container-lg .navbar-collapse .cta-container, .header .navbar .container-xl .navbar-collapse .cta-container, .header .navbar .container-xxl .navbar-collapse .cta-container {
   width: 150px;
@@ -12362,7 +12371,7 @@ textarea.form-control-lg {
   display: inline-block;
   font-weight: 900;
   font-size: 7vw;
-  color: #ff4cff;
+  color: #dd098c;
   margin: 0 0 0 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -14782,6 +14791,158 @@ textarea.form-control-lg {
 @media (max-width: 576px) {
   .modifications-container .main-container-edit_item .form {
     width: 90vw;
+  }
+}
+.delete-container {
+  display: flex;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 200px 0 200px 0;
+}
+.delete-container .delete-title-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.delete-container .delete-title-container .delete-title_text {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 0 0;
+  text-align: center;
+}
+.delete-container .delete-title-container form {
+  margin: 30px 0 0 0;
+}
+.delete-container .delete-title-container form .cssbuttons-io {
+  position: relative;
+  border-radius: 0.8em;
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background: linear-gradient(to right, #e22d2d, #e00000);
+  color: ghostwhite;
+  overflow: hidden;
+}
+.delete-container .delete-title-container form .cssbuttons-io .span-delete {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4em 0.6em 0.4em 0.75em;
+  transform: skew(0deg);
+}
+.delete-container .delete-title-container form .cssbuttons-io .span-delete input {
+  font-family: "Montserrat", sans-serif;
+  background: transparent;
+  border-style: none;
+  color: white;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.delete-container .delete-title-container form .cssbuttons-io::before,
+.delete-container .delete-title-container form .cssbuttons-io::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.delete-container .delete-title-container form .cssbuttons-io::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+.delete-container .delete-title-container form .cssbuttons-io:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+.delete-container .delete-title-container form .cssbuttons-io:active {
+  transform: scale(0.95);
+}
+.delete-container .delete-title-container .lootie {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.delete-container .buttonback-container {
+  display: flex;
+  width: 90%;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: white;
+  justify-content: center;
+  padding: 10px 0 0 0;
+  margin: 50px 0 0 0;
+}
+.delete-container .buttonback-container .buttonback {
+  position: relative;
+  height: 40px;
+  width: 120px;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: transparent;
+  transition: all 0.5s;
+  border: none;
+}
+.delete-container .buttonback-container .buttonback a {
+  text-decoration: none;
+  color: white;
+}
+.delete-container .buttonback-container .buttonback::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  z-index: 1;
+}
+.delete-container .buttonback-container .buttonback:hover::before {
+  opacity: 0;
+  transform: scale(0.7, 0.7);
+}
+.delete-container .buttonback-container .buttonback::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+  border: 1px solid #ffffff;
+  transform: scale(1.2, 1.2);
+  opacity: 0;
+  z-index: 1;
+  text-align: center;
+}
+.delete-container .buttonback-container .buttonback:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+@media (max-width: 576px) {
+  .delete-container {
+    margin: 50px 0 50px 0;
   }
 }
 /* width */

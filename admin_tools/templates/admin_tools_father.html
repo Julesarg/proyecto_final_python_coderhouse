@@ -61,9 +61,9 @@
               <li class="nav-item nav-item-button">
                 <a class="nav-link" href="{% url 'about' %}">About me</a>
               </li>
-              <li class="nav-item nav-item-button">
+              <li class="nav-item nav-item-button nav-item-button-admin">
                 {% if request.user.is_superuser %}
-                <a class="nav-link" href="{% url 'admin_tools_home' %}">Administration</a>
+                <a class="nav-link superuser_opt" href="{% url 'admin_tools_home' %}">Administration</a>
                 {% endif %}
               </li>
               <li class="nav-item nav-item-button">

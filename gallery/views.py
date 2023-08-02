@@ -103,5 +103,4 @@ def searchByMat(request):
         else:            
             return render(request, 'gallery_home.html')
     else:
-        # return redirect('../errorMessage')
-        return render(request, 'gallery.html')
+        return render(request, 'search_fail.html')

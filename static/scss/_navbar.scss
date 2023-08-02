@@ -53,6 +53,12 @@
               margin: 0;
               padding: 0;
             }
+            .superuser_opt {
+              color: rgba(46, 174, 9, 0.7);
+            }
+            .superuser_opt:hover {
+              color: rgb(46, 174, 9);
+            }
           }
           /* button modif */
           .nav-item-button {
@@ -93,6 +99,9 @@
             transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
             transition-duration: 400ms;
             transition-property: width, left;
+          }
+          .nav-item-button-admin:after {
+            background-color: rgb(46, 174, 9);
           }
         }
         .cta-container {
