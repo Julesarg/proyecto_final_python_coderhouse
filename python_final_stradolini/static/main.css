@@ -14220,15 +14220,16 @@ textarea.form-control-lg {
   color: ghostwhite;
   overflow: hidden;
 }
-.delete-container .delete-title-container form .cssbuttons-io span {
+.delete-container .delete-title-container form .cssbuttons-io .span-delete {
   position: relative;
   z-index: 10;
   transition: color 0.4s;
   display: inline-flex;
   align-items: center;
   padding: 0.4em 0.6em 0.4em 0.75em;
+  transform: skew(0deg);
 }
-.delete-container .delete-title-container form .cssbuttons-io span input {
+.delete-container .delete-title-container form .cssbuttons-io .span-delete input {
   font-family: "Montserrat", sans-serif;
   background: transparent;
   border-style: none;
@@ -14510,6 +14511,7 @@ textarea.form-control-lg {
 }
 .modifications-container .main-container-add_item .form span {
   display: inline-block;
+  transform: skew(21deg);
 }
 .modifications-container .main-container-add_item .form .button::before {
   content: "";
@@ -14547,6 +14549,7 @@ textarea.form-control-lg {
 }
 .modifications-container span {
   display: inline-block;
+  transform: skew(21deg);
 }
 .modifications-container .button-return-add::before {
   content: "";
@@ -14775,9 +14778,11 @@ textarea.form-control-lg {
   width: 160px;
   text-transform: uppercase;
   cursor: pointer;
+  transform: skew(-21deg);
 }
 .modifications-container .main-container-edit_item .form span {
   display: inline-block;
+  transform: skew(21deg);
 }
 .modifications-container .main-container-edit_item .form .button::before {
   content: "";
@@ -14811,9 +14816,11 @@ textarea.form-control-lg {
   width: 160px;
   text-transform: uppercase;
   cursor: pointer;
+  transform: skew(-21deg);
 }
 .modifications-container span {
   display: inline-block;
+  transform: skew(21deg);
 }
 .modifications-container .button-return::before {
   content: "";

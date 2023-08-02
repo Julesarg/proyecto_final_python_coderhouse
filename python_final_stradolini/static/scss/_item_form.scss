@@ -180,11 +180,11 @@
         width: 160px;
         text-transform: uppercase;
         cursor: pointer;
-        // transform: skew(-21deg);
+        transform: skew(-21deg);
       }
       span {
         display: inline-block;
-        // transform: skew(21deg);
+        transform: skew(21deg);
       }
       .button::before {
         content: "";
@@ -222,11 +222,11 @@
     width: 160px;
     text-transform: uppercase;
     cursor: pointer;
-    // transform: skew(-21deg);
+    transform: skew(-21deg);
   }
   span {
     display: inline-block;
-    // transform: skew(21deg);
+    transform: skew(21deg);
   }
   .button-return::before {
     content: "";

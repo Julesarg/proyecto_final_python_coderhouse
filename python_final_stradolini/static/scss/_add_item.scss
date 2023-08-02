@@ -166,7 +166,7 @@
       }
       span {
         display: inline-block;
-        // transform: skew(21deg);
+        transform: skew(21deg);
       }
       .button::before {
         content: "";
@@ -208,7 +208,7 @@
   }
   span {
     display: inline-block;
-    // transform: skew(21deg);
+    transform: skew(21deg);
   }
   .button-return-add::before {
     content: "";

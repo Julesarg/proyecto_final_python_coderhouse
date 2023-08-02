@@ -34,15 +34,16 @@
         color: ghostwhite;
         overflow: hidden;
       }
-      .cssbuttons-io span {
+      .cssbuttons-io .span-delete {
         position: relative;
         z-index: 10;
         transition: color 0.4s;
         display: inline-flex;
         align-items: center;
         padding: 0.4em 0.6em 0.4em 0.75em;
+        transform: skew(0deg);
       }
-      .cssbuttons-io span input {
+      .cssbuttons-io .span-delete input {
         font-family: "Montserrat", sans-serif;
         background: transparent;
         border-style: none;
