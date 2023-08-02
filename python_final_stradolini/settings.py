@@ -138,7 +138,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'python_final_stradolini/static'
+    BASE_DIR / 'static'
 ]
 
 # Default primary key field type
