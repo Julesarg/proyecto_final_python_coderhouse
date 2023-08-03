@@ -1,21 +1,22 @@
 //bootstrap//
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "scss/navbar";
-@import "scss/index";
 @import "scss/footer";
-@import "scss/welcome";
-@import "scss/about";
-@import "scss/signup";
-@import "scss/login";
-@import "scss/gallery";
-@import "scss/list";
-@import "scss/detail";
-@import "scss/add_success";
-@import "scss/item_confirm_delete";
-@import "scss/add_item";
-@import "scss/item_form";
-@import "scss/message";
-@import "scss/profile";
+@import "scss/index/index";
+@import "scss/index/message";
+@import "scss/index/about";
+@import "scss/gallery/gallery";
+@import "scss/gallery/list";
+@import "scss/gallery/detail";
+@import "scss/gallery/add_success";
+@import "scss/gallery/item_confirm_delete";
+@import "scss/gallery/add_item";
+@import "scss/gallery/item_form";
+@import "scss/account/welcome";
+@import "scss/account/signup";
+@import "scss/account/login";
+@import "scss/account/profile";
+@import "scss/account/edit_profile";
 
 //SCROLLBAR//
 /* width */

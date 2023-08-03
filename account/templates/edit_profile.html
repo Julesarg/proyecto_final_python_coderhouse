@@ -2,18 +2,16 @@
 {% load static %}
 {% block changeblock4 %}
 
-<div class="main-container-signup">
+<!-- <div class="main-container-signup">
   <form action="" class="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
-    <div class="title">Edit Profile</div>
-
-
-    <div class="form-row">
+    <div class="title">Edit Profile</div> -->
+<!-- <div class="form-row">
       <div class="form-group col-md-2 ">
         <label for="id_age">Age:</label>
         <input type="number" name="age" class="form-control input" value="{{form.age.value}}" required="" id="id_age">
       </div>
-    </div>
-    <div class="form-row form-radio col-md-2">
+    </div> -->
+<!-- <div class="form-row form-radio col-md-2">
       <label for="id_gender">Gender:</label>
       <select class="form-check" name="gender" id="id_gender">
         <option class="form-check-label" value="Male" selected="">Male</option>
@@ -21,71 +19,90 @@
         <option class="form-check-label" value="Other">Other</option>
         <option class="form-check-label" value="I prefer not to tell">I prefer not to tell</option>
       </select>
-    </div>
-    <div class="form-row">
+    </div> -->
+<!-- <div class="form-row">
       <div class="form-group col-md-4">
         <label for="id_avatar">Profile Pic</label>
         Modificar:
         <input type="file" class="form-control-file form-control input" name="avatar" accept="image/*" id="id_avatar">
       </div>
+    </div> -->
+<!-- <button type="submit" class="btn btn-primary button" value="Send">
+  <span>Update</span>
+</button>
+{% if form %}
+<h1>CORRECTO </h1>
+<img src="{{form.value.avatar}}" alt="profilepic">
+{% else %}
+<h1>INCORRECTO</h1>
+{% endif %}
+</form>
+</div> -->
+
+
+
+
+
+<div class="profile-container">
+  <form action="" class="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <div class="card-edit">
+      <div class="defaultimg-container">
+        <img card-img-top src="{{profile.avatar.url}}" alt="profilepic" accept="image/*">
+      </div>
+      <div class="card-body">
+        <label class="id_avatar">
+          <input type="file" name="avatar" accept="image/*" id="id_avatar" />
+          <div class="button" data-tooltip="Size: 20Mb">
+            <div class="button-wrapper">
+              <div class="text">Load img</div>
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em"
+                  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </label>
+      </div>
     </div>
-    <button type="submit" class="btn btn-primary button" value="Send">
-      <span>Update</span>
-    </button>
-    {% if form %}
-    <h1>CORRECTO </h1>
-    <img src="{{form.value.avatar}}" alt="profilepic">
-    {% else %}
-    <h1>INCORRECTO</h1>
-    {% endif %}
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <label for="id_age">Age:</label>
+        <input type="number" name="age" class="form-control input-age" value="{{form.age.value}}" required=""
+          id="id_age">
+      </li>
+      <li class="list-group-item">
+        <label for="id_gender">Gender:</label>
+        <select class="form-check" name="gender" id="id_gender">
+          <option class="form-check-label" value="Male" selected="">Male</option>
+          <option class="form-check-label" value="Female">Female</option>
+          <option class="form-check-label" value="Other">Other</option>
+          <option class="form-check-label" value="I prefer not to tell">I prefer not to tell</option>
+        </select>
+      </li>
+    </ul>
+    <div class="card-body card-bottom">
+      <button class="edit-button" type="submit" class="btn btn-primary button" value="Send">
+        <span>Update</span>
+      </button>
+      <!-- <button class="edit-button">
+        <a class="card-body-a" href="{% url 'edit_profile' user.profile.id %}">
+          <svg class="edit-svgIcon" viewBox="0 0 512 512">
+            <path
+              d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z">
+            </path>
+          </svg>
+        </a>
+      </button> -->
+    </div>
   </form>
 </div>
 
-<!-- <div class="main-container-signup">
-  <form action="" class="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
-    <div class="title">Edit Profile</div>
-    <div class="form-row">
-      <div class="form-group col-md-2 ">
-        <label for="id_age">Age</label>
-        <input type="number" class="form-control input" name="{{form.age}}">
-      </div>
-    </div>
-    <div class="form-row form-radio">
-      <label for="id_gender">Gender</label>
-      <div class="form-check" id="id_gender">
-        <label class="form-check-label" for="id_gender_1">
-          <input class="form-check-input" type="radio" value="Male" required="" id="id_gender_1" value="option1"
-            checked>
-          Male
-        </label>
-        <label class="form-check-label" for="id_gender_2">
-          <input class="form-check-input" type="radio" name="gender" value="Female" required="" id="id_gender_2"
-            value="option2">
-          Female
-        </label>
-        <label class="form-check-label" for="id_gender_3">
-          <input class="form-check-input" type="radio" name="gender" value="Other" required="" id="id_gender_3"
-            value="option3">
-          Other
-        </label>
-        <label class="form-check-label" for="id_gender_4">
-          <input class="form-check-input" type="radio" name="gender" value="I prefer not to tell" required=""
-            id="id_gender_4" value="option4">
-          I prefer not to tell
-        </label>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-4">
-        <label for="id_avatar">Profile pic</label>
-        <input type="file" class="form-control-file form-control input" name="" accept="image/*" id="id_avatar">
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary button" value="Send">
-      <span>Update</span>
-    </button>
-  </form>
-</div> -->
+
 
 
 {% endblock %}
