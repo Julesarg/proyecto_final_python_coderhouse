@@ -28,6 +28,7 @@
     }
     .welcome-container-bottom_buttons {
       display: flex;
+      justify-content: center;
       button {
         --primary-color: #000000;
         --secondary-color: #fff;

@@ -7,13 +7,27 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.views import generic
-from django.views.generic.detail import DetailView
-from django.views.generic.edit import UpdateView
+from django.views.generic import DetailView, CreateView, UpdateView
 from django.shortcuts import get_object_or_404
 
-## perfil ##
+## CREAR PROFILE ##
+class CreateProfileView(CreateView):
+    model = Profile
+    form_class = UserProfileForm
+    template_name = 'create_profile.html'
 
-## CODIGO PARA VER USUARIO##
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+## EDITAR PROFILE ##
+class EditProfileView(generic.UpdateView):
+    model = Profile
+    template_name = 'edit_profile.html'
+    fields = ['age', 'gender', 'avatar']
+    success_url = 'profile'
+
+## VER PROFILE##
 class ProfileView(DetailView):
     model = Profile
     template_name = 'profile.html'
@@ -23,33 +37,6 @@ class ProfileView(DetailView):
         context['id_user'] = id_user
         return context
 
-class EditProfileView(generic.UpdateView):
-    model = Profile
-    template_name = 'edit_profile.html'
-    fields = ['age', 'gender', 'avatar']
-    success_url = 'profile'
- 
-
-
-##editar perfil##
-# @login_required
-# def edit_profile(request):
-#     usuario = request.user
-#     if request.method == 'POST':
-#         form = UserEditForm(request.POST)
-#         if form.is_valid():
-#             data = form.cleaned_data
-#             usuario.first_name = data['first_name']
-#             usuario.last_name = data['last_name']          
-#             usuario.email = data['email']
-#             usuario.password1 = data['password1']
-#             usuario.password2 = data['password2'] 
-#             usuario.save()
-#             return render(request, 'profile.html')
-#     else:
-#         form = UserEditForm(initial={'first_name': usuario.first_name, 'last_name': usuario.last_name, 'email': usuario.email})
-
-#     return render(request, 'edit_profile.html', {'form': form, 'usuario': usuario})
 
 
 def login_request(request):
@@ -77,7 +64,7 @@ def register(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data['username']
+            username = form.cleaned_data['username']     
             form.save()
         return render(request, 'register_success.html', {'form': form})
     else:

@@ -14541,6 +14541,7 @@ textarea.form-control-lg {
 }
 .welcome-container .welcome-container-bottom .welcome-container-bottom_buttons {
   display: flex;
+  justify-content: center;
 }
 .welcome-container .welcome-container-bottom .welcome-container-bottom_buttons button {
   --primary-color: #000000;
