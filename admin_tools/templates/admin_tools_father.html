@@ -56,7 +56,7 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'index_home' %}">Home</a>
               </li>
               <li class="nav-item nav-item-button">
-                <a class="nav-link" href="{% url 'message' %}">Message Us</a>
+                <a class="nav-link" href="{% url 'gallery_home' %}">Gallery</a>
               </li>
               <li class="nav-item nav-item-button">
                 <a class="nav-link" href="{% url 'about' %}">About me</a>
@@ -67,7 +67,7 @@
                 {% endif %}
               </li>
               <li class="nav-item nav-item-button">
-                <a class="nav-link" href="#">Messages</a>
+                <a class="nav-link" href="{% url 'message' %}">Message Us</a>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 cta-container">
@@ -80,7 +80,7 @@
                 {% if user.profile.id %}
                 <a class="cta_link1" href="{% url 'profile' user.profile.id %}">Profile |</a>
                 {% else %}
-                <a class="cta_link1" href="{% url 'create_profile' user.profile.id %}">Add Profile |</a>
+                <a class="cta_link1" href="{% url 'create_profile'%}">Add Profile |</a>
                 {% endif %}
                 <a class="cta_link2" href="{% url 'logout' %}">logout</a>
                 {% endif %}
@@ -121,7 +121,7 @@
               {% if user.profile.id %}
               <a class="cta_link1" href="{% url 'profile' user.profile.id %}">Profile</a>
               {% else %}
-              <a class="cta_link1" href="{% url 'create_profile' user.profile.id %}">Add Profile</a>
+              <a class="cta_link1" href="{% url 'create_profile' %}">Add Profile</a>
               {% endif %}
             </li>
             {% endif %}

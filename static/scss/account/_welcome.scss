@@ -98,10 +98,15 @@
 
 @media (max-width: 576px) {
   .welcome-container {
+    width: fit-content;
     .welcome-container-top {
       width: 80%;
     }
     .welcome-container-bottom {
+      width: 70%;
+      p {
+        font-size: 1.2rem;
+      }
       .welcome-container-bottom_buttons {
         flex-direction: column;
         justify-content: center;

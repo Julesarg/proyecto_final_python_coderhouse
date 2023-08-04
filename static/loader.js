@@ -5,7 +5,7 @@ function showPage() {
 
 let variable;
 function executeLoader() {
-  variable = setTimeout(showPage,4500);
+  variable = setTimeout(showPage,3000);
 }
 //gallery loader//
 let variable2;

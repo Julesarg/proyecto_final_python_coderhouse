@@ -12094,9 +12094,6 @@ textarea.form-control-lg {
 .header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item-button-admin:after, .header .navbar .container-sm .navbar-collapse .navbar-nav .nav-item-button-admin:after, .header .navbar .container-md .navbar-collapse .navbar-nav .nav-item-button-admin:after, .header .navbar .container-lg .navbar-collapse .navbar-nav .nav-item-button-admin:after, .header .navbar .container-xl .navbar-collapse .navbar-nav .nav-item-button-admin:after, .header .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item-button-admin:after {
   background-color: rgb(46, 174, 9);
 }
-.header .navbar .container-fluid .navbar-collapse .cta-container, .header .navbar .container-sm .navbar-collapse .cta-container, .header .navbar .container-md .navbar-collapse .cta-container, .header .navbar .container-lg .navbar-collapse .cta-container, .header .navbar .container-xl .navbar-collapse .cta-container, .header .navbar .container-xxl .navbar-collapse .cta-container {
-  width: 150px;
-}
 .header .navbar .container-fluid .navbar-collapse .cta-container .cta, .header .navbar .container-sm .navbar-collapse .cta-container .cta, .header .navbar .container-md .navbar-collapse .cta-container .cta, .header .navbar .container-lg .navbar-collapse .cta-container .cta, .header .navbar .container-xl .navbar-collapse .cta-container .cta, .header .navbar .container-xxl .navbar-collapse .cta-container .cta {
   border: none;
   background: none;
@@ -12148,6 +12145,28 @@ textarea.form-control-lg {
   width: 100%;
 }
 
+@media (max-width: 576px) {
+  .header .navbar .container-fluid .navbar-collapse, .header .navbar .container-sm .navbar-collapse, .header .navbar .container-md .navbar-collapse, .header .navbar .container-lg .navbar-collapse, .header .navbar .container-xl .navbar-collapse, .header .navbar .container-xxl .navbar-collapse {
+    margin: 5px 0 0 0;
+  }
+  .header .navbar .container-fluid .navbar-collapse ul, .header .navbar .container-sm .navbar-collapse ul, .header .navbar .container-md .navbar-collapse ul, .header .navbar .container-lg .navbar-collapse ul, .header .navbar .container-xl .navbar-collapse ul, .header .navbar .container-xxl .navbar-collapse ul {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .header .navbar .container-fluid .navbar-collapse ul li, .header .navbar .container-sm .navbar-collapse ul li, .header .navbar .container-md .navbar-collapse ul li, .header .navbar .container-lg .navbar-collapse ul li, .header .navbar .container-xl .navbar-collapse ul li, .header .navbar .container-xxl .navbar-collapse ul li {
+    padding: 1px 0 1px 0;
+  }
+  .header .navbar .container-fluid .navbar-collapse .cta-container, .header .navbar .container-sm .navbar-collapse .cta-container, .header .navbar .container-md .navbar-collapse .cta-container, .header .navbar .container-lg .navbar-collapse .cta-container, .header .navbar .container-xl .navbar-collapse .cta-container, .header .navbar .container-xxl .navbar-collapse .cta-container {
+    padding: 8px 0 8px 0;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    align-content: flex-end;
+  }
+}
 .footer-container {
   margin-top: 100px;
   display: flex;
@@ -14602,8 +14621,18 @@ textarea.form-control-lg {
 }
 
 @media (max-width: 576px) {
+  .welcome-container {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
   .welcome-container .welcome-container-top {
     width: 80%;
+  }
+  .welcome-container .welcome-container-bottom {
+    width: 70%;
+  }
+  .welcome-container .welcome-container-bottom p {
+    font-size: 1.2rem;
   }
   .welcome-container .welcome-container-bottom .welcome-container-bottom_buttons {
     flex-direction: column;

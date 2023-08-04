@@ -81,7 +81,7 @@
                 {% if user.profile.id %}
                 <a class="cta_link1" href="{% url 'profile' user.profile.id %}">Profile |</a>
                 {% else %}
-                <a class="cta_link1" href="{% url 'create_profile' user.profile.id %}">Add Profile |</a>
+                <a class="cta_link1" href="{% url 'create_profile'%}">Add Profile |</a>
                 {% endif %}
                 <a class="cta_link2" href="{% url 'logout' %}">logout</a>
                 {% endif %}
@@ -122,7 +122,7 @@
               {% if user.profile.id %}
               <a class="cta_link1" href="{% url 'profile' user.profile.id %}">Profile</a>
               {% else %}
-              <a class="cta_link1" href="{% url 'create_profile' user.profile.id %}">Add Profile</a>
+              <a class="cta_link1" href="{% url 'create_profile' %}">Add Profile</a>
               {% endif %}
             </li>
             {% endif %}

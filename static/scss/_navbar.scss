@@ -105,7 +105,6 @@
           }
         }
         .cta-container {
-          width: 150px;
           //login button//
           .cta {
             border: none;
@@ -147,6 +146,35 @@
           .cta:hover::after,
           .cta:hover::before {
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    .navbar {
+      .container-fluid {
+        .navbar-collapse {
+          margin: 5px 0 0 0;
+          ul {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            li {
+              padding: 1px 0 1px 0;
+            }
+          }
+          .cta-container {
+            padding: 8px 0 8px 0;
+            border-top-color: rgb(255, 255, 255, 0.5);
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-bottom-color: rgb(255, 255, 255, 0.5);
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            align-content: flex-end;
           }
         }
       }
