@@ -12,8 +12,9 @@ FALTA INGRESAR UN VIDEO CORTO ACA
 
 # Indice
 
+- [About Me](#about-me_speech_balloon)
 - [About the Project](#rocketabout-the-project)
-- [About Me](#rocketabout-me)
+- [Notas](#black_nibnotas)
 - [External Resources Dependencies & Editors](#linkexternal-resources-dependencies-and-editors)
 
 ### Authors
@@ -66,7 +67,7 @@ Se trabaja un sitio falso de compraventa de arte de todo tipo. De acuerdo a los 
 
 <div align="center">
 
-## Pasos para correr el sitio
+## :gear:Pasos para correr el sitio:gear:
 
 </div>
 
@@ -103,6 +104,6 @@ Se utilizan diversidad de recursos de estilo
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-### :rocket:About Me
+### About Me :speech_balloon:
 
 Estudiante de carrera de **FullStack Developer** (React, Angular) y Python en CoderHouse, emprendedor y trabajador. De Buenos Aires, Argentina. Adquiriendo conocimientos con ansias de incursionar en el mundo IT.
