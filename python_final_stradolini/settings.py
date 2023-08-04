@@ -78,23 +78,23 @@ WSGI_APPLICATION = 'python_final_stradolini.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+DATABASES= {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'julianarg$entregafinaldb',
+    'USER': 'julianarg',
+    'PASSWORD': 'python2023',
+    'HOST':'julianarg.mysql.pythonanywhere-services.com',
+    'PORT': '3306',
     }
 }
-
-# DATABASES= {
-#     'default': {
-#     'ENGINE': 'django.db.backends.mysql',
-#     'NAME': 'julianarg$entregafinaldb',
-#     'USER': 'julianarg',
-#     'PASSWORD': 'python2023',
-#     'HOST':'julianarg.mysql.pythonanywhere-services.com',
-#     'PORT': '3306',
-# }
-# }
 
 
 # Password validation
@@ -133,12 +133,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
-# STATIC_ROOT = BASE_DIR / '/static/'
 MEDIA_ROOT = BASE_DIR / 'media/'
+STATIC_ROOT = BASE_DIR / 'static'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/')
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static/')
+# ]
 
 
 
