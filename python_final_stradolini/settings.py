@@ -90,7 +90,7 @@ DATABASES= {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'julianarg$entregafinaldb',
     'USER': 'julianarg',
-    'PASSWORD': 'python2023',
+    'PASSWORD': 'mysqlpass123',
     'HOST':'julianarg.mysql.pythonanywhere-services.com',
     'PORT': '3306',
     }
