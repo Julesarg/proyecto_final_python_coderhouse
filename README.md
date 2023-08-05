@@ -97,6 +97,14 @@ pip install pillow
 python manage.py runserver
 ```
 
+**Para acceder al admin**
+
+```bash
+username: julian
+
+password: coder123
+```
+
 ### :link:External Resources Dependencies and Editors
 
 Se utilizan diversidad de recursos de estilo
