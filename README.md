@@ -6,15 +6,17 @@
 
 <div align="center">
 
-FALTA INGRESAR UN VIDEO CORTO ACA
+[![Link to view](https://i.imgur.com/CgvHSXd.png)](https://www.youtube.com/watch?v=f0atWFpUd4g)
+
+**Click the video to view sample**
 
 </div>
 
 # Indice
 
-- [About Me](#about-me_speech_balloon)
+- [About Me](#about-me-speech-balloon)
 - [About the Project](#rocketabout-the-project)
-- [Notas](#black_nibnotas)
+- [Notas](#black-nibnotas)
 - [External Resources Dependencies & Editors](#linkexternal-resources-dependencies-and-editors)
 
 ### Authors

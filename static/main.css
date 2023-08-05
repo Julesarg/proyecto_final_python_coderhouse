@@ -13570,6 +13570,12 @@ textarea.form-control-lg {
   transform: scale(1, 1);
 }
 
+@media (max-width: 576px) {
+  .list-container .list-container-textc .list-title-container {
+    flex-direction: column;
+    padding-bottom: 5px;
+  }
+}
 .list-detail-container {
   display: flex;
   width: 100vw;

@@ -15,6 +15,8 @@ class CreateProfileView(CreateView):
     model = Profile
     form_class = UserProfileForm
     template_name = 'create_profile.html'
+    login_url = '../../account/login'
+    redirect_field_name = 'redirect_to'
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -26,16 +28,21 @@ class EditProfileView(generic.UpdateView):
     template_name = 'edit_profile.html'
     fields = ['age', 'gender', 'avatar']
     success_url = 'profile'
+    login_url = '../../account/login'
+    redirect_field_name = 'redirect_to'
 
 ## VER PROFILE##
 class ProfileView(DetailView):
     model = Profile
     template_name = 'profile.html'
+    login_url = '../../account/login'
+    redirect_field_name = 'redirect_to'
     def get_context_data(self, *args, **kwargs):
         context = super(ProfileView, self).get_context_data(*args, **kwargs)
         id_user = get_object_or_404(Profile, id=self.kwargs['pk'])
         context['id_user'] = id_user
         return context
+    
 
 
 

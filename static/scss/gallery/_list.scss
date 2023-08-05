@@ -350,3 +350,14 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .list-container {
+    .list-container-textc {
+      .list-title-container {
+        flex-direction: column;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
   <div class="welcome-container-top">
   </div>
   <div class="welcome-container-bottom">
-    <p>Hi there! Welcome to the community {{form.first_name.value}}, how about getting started?</p>
+    <p>Hi there! Welcome to the community "{{form.first_name.value}}", how about getting started?</p>
     <div class="welcome-container-bottom_buttons">
       <button>
         <a href="{% url 'login' %}">
@@ -17,8 +17,8 @@
         </div>
       </button>
       <button>
-        <a href="{% url 'add_item' %}">
-          Add new Item
+        <a href="{% url 'index_home' %}">
+          Go to main
         </a>
         <div class="arrow-wrapper">
           <div class="arrow"></div>
