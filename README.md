@@ -14,9 +14,9 @@
 
 # Indice
 
-- [About Me](#about-me-speech-balloon)
+- [About Me](#about_mespeech-balloon)
 - [About the Project](#rocketabout-the-project)
-- [Notas](#black-nibnotas)
+- [Notas](#black_nibnotas)
 - [External Resources Dependencies & Editors](#linkexternal-resources-dependencies-and-editors)
 
 ### Authors
