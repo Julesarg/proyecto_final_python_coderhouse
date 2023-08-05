@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![Link to view](https://i.imgur.com/CgvHSXd.png)](https://www.youtube.com/watch?v=f0atWFpUd4g)
+[![Link to view](https://i.imgur.com/CgvHSXd.png)](https://www.youtube.com/watch?v=XCAIAYz2xDM)
 
 **Click the video to view sample**
 
