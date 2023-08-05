@@ -14,7 +14,7 @@
 
 # Indice
 
-- [About Me](#about_mespeech-balloon)
+- [About Me](#speech-balloonabout-me)
 - [About the Project](#rocketabout-the-project)
 - [Notas](#black_nibnotas)
 - [External Resources Dependencies & Editors](#linkexternal-resources-dependencies-and-editors)
@@ -33,7 +33,7 @@ Se trabaja un sitio falso de compraventa de arte de todo tipo. De acuerdo a los 
 
   <div align="center">
 
-## Notas
+## :black_nib:Notas
 
 </div>
 
@@ -106,6 +106,6 @@ Se utilizan diversidad de recursos de estilo
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-### About Me :speech_balloon:
+### :speech_balloon:About Me
 
 Estudiante de carrera de **FullStack Developer** (React, Angular) y Python en CoderHouse, emprendedor y trabajador. De Buenos Aires, Argentina. Adquiriendo conocimientos con ansias de incursionar en el mundo IT.
