@@ -1,0 +1,318 @@
+.container-items {
+  width: 90%;
+  height: fit-content;
+  min-height: 1080px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  .list-container-textc {
+    width: 100%;
+    display: flex;
+    margin: 50px 0 0 0;
+    .list-title-container {
+      width: 100%;
+      display: flex;
+      border-bottom-color: white;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      p {
+        color: white;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2rem;
+        user-select: none;
+      }
+    }
+  }
+  .accordion {
+    margin: 50px 0 0 0;
+    --bs-accordion-border-color: transparent;
+    --bs-accordion-btn-icon: none;
+    --bs-accordion-btn-icon-width: 0;
+    --bs-accordion-btn-focus-border-color: transparent;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem transparent;
+    .accordion-item {
+      background-color: transparent;
+      border-color: transparent;
+      border-width: 2px;
+      border-radius: 0;
+      .accordion-header {
+        .accordion-button {
+          color: white;
+          background-color: transparent;
+          text-align: center;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          p {
+            width: 100%;
+            margin: 0;
+            font-size: 1.5rem;
+          }
+        }
+        .accordion-button:hover {
+          background-color: rgba(207, 0, 114, 0.7);
+        }
+        .accordion-button:active {
+          background-color: rgba(207, 0, 114, 0.842);
+        }
+        .accordion-button:focus {
+          background-color: rgba(255, 255, 255);
+          border-color: rgba(255, 255, 255);
+          color: black;
+        }
+      }
+      .accordion-collapse {
+        .accordion-body {
+          padding: 20px 0 0 0;
+          .responsive-table {
+            width: 100%;
+            border-spacing: 0;
+            thead {
+              position: relative;
+              clip: auto;
+              height: auto;
+              width: auto;
+              overflow: auto;
+              tr {
+                th {
+                  background-color: rgba(207, 0, 114, 0.7);
+                  border: 1px solid rgba(255, 36, 156, 0.7);
+                  font-weight: normal;
+                  text-align: center;
+                  color: white;
+                  &:first-of-type {
+                    text-align: center;
+                  }
+                }
+              }
+            }
+            tbody {
+              padding: 0;
+              text-align: center;
+              white-space: normal;
+              color: white;
+              display: table-row-group;
+              tr {
+                margin-bottom: 1em;
+                display: table-row;
+                border-width: 1px;
+
+                &:last-of-type {
+                  margin-bottom: 0;
+                }
+                &:nth-of-type(even) {
+                  background-color: rgba(37, 37, 37, 0.753);
+                }
+              }
+              th[scope="row"] {
+                border-left: 1px solid rgba(255, 36, 156, 0.7);
+                border-bottom: 1px solid rgba(255, 36, 156, 0.7);
+                background-color: transparent;
+                color: white;
+                text-align: center;
+              }
+              td {
+                border-left: 1px solid rgba(255, 36, 156, 0.7);
+                border-bottom: 1px solid rgba(255, 36, 156, 0.7);
+                text-align: center;
+
+                &:last-of-type {
+                  border-right: 1px solid rgba(255, 36, 156, 0.7);
+                }
+              }
+              td[data-type="currency"] {
+                text-align: center;
+              }
+              td[data-title]:before {
+                content: attr(data-title);
+                float: left;
+                font-size: 0.8em;
+                color: white;
+                content: none;
+              }
+              .btn {
+                a {
+                  text-decoration: none;
+                  color: white;
+                }
+              }
+            }
+            tr {
+              padding: 0;
+              text-align: center;
+              white-space: normal;
+              color: white;
+              display: table-row;
+            }
+            th {
+              text-align: center;
+              white-space: normal;
+              color: white;
+              vertical-align: middle;
+              display: table-cell;
+              padding: 0.5em;
+            }
+            td {
+              text-align: center;
+              white-space: normal;
+              color: white;
+              vertical-align: middle;
+              display: table-cell;
+              padding: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+  .buttonback-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0 0 0;
+    margin: 50px 0 0 0;
+    .buttonback {
+      position: relative;
+      height: 40px;
+      width: 120px;
+      color: #ffffff;
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      background-color: transparent;
+      transition: all 0.5s;
+      border: none;
+    }
+    .buttonback::before {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s;
+      z-index: 1;
+    }
+    .buttonback:hover::before {
+      opacity: 0;
+      transform: scale(0.7, 0.7);
+    }
+    .buttonback::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s;
+      border: 1px solid #ffffff;
+      transform: scale(1.2, 1.2);
+      opacity: 0;
+      z-index: 1;
+      text-align: center;
+    }
+    .buttonback:hover::after {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container-items {
+    .accordion {
+      .accordion-item {
+        .accordion-header {
+          .accordion-button {
+            p {
+              font-size: 1.3rem;
+            }
+          }
+        }
+        .accordion-collapse {
+          .accordion-body {
+            .responsive-table {
+              thead {
+                display: none;
+              }
+              th,
+              tbody {
+                tr {
+                  display: grid;
+                  border-width: 0;
+                  th[scope="row"] {
+                    background-color: rgba(207, 0, 114, 0.7);
+                  }
+                  td {
+                    text-align: right;
+                    border-left: none;
+                    border-bottom: none;
+                    font-size: 0.8rem;
+                    &:last-of-type {
+                      border-right: none;
+                    }
+                  }
+                  td[data-type="currency"] {
+                    text-align: right;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  }
+                  td[data-title]:before {
+                    content: attr(data-title);
+                    font-size: 0.8rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container-items {
+    width: 90%;
+    align-items: center;
+    .list-container-textc {
+      justify-content: center;
+      width: 90vw;
+      .list-title-container {
+        justify-content: center;
+        p {
+          font-size: 1.7rem;
+        }
+      }
+    }
+    .accordion {
+      width: 90vw;
+      .accordion-item {
+        .accordion-collapse {
+          .accordion-body {
+            .responsive-table {
+              th,
+              tbody {
+                tr {
+                  display: grid;
+                  border-width: 0;
+                  th[scope="row"] {
+                  }
+                  td {
+                    &:last-of-type {
+                    }
+                  }
+                  td[data-type="currency"] {
+                  }
+                  td[data-title]:before {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-{% extends 'gallery_father.html' %}
+{% extends 'admin_tools_father.html' %}
 {% load static %}
-{% block changeblock2 %}
+{% block changeblock3 %}
 <div class="delete-container">
   <div class="delete-title-container">
     <p class="delete-title_text">Are you sure you want to delete "{{object.item_name}}"</p>
@@ -23,7 +23,7 @@
       Back
     </button>
     <button class="buttonback">
-      <a href="{% url 'gallery_home' %}">Cancel</a>
+      <a href="{% url 'admin_tools_home' %}">Cancel</a>
     </button>
   </div>
 </div>

@@ -1,0 +1,88 @@
+{% extends 'admin_tools_father.html' %}
+{% load static %}
+{% block changeblock3 %}
+
+<div class="container">
+  <div class="admin-container-title">
+    <p class="admin-container-title_text">Edit Item</p>
+  </div>
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th scope="col">Item Name</th>
+        <th scope="col">Img</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Material</th>
+        <th scope="col">Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <form action="" class="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <tr>
+          <th scope="row">
+            <input type="text" class="form-control input" id="id_item_name" value="{{item.item_name}}" name="item_name"
+              maxlength="25" required="" placeholder="item title">
+          </th>
+
+          <td data-title="Img">
+            <input type="file" class="form-control-file form-control input" name="item_image" accept="image/*"
+              id="id_item_image">
+          </td>
+
+          <td data-title="Description">
+            <textarea class="form-control input" Name="item_description" maxlength="200" required=""
+              id="id_item_description" placeholder="brief about your item" rows="3">
+              {{item.item_description}}</textarea>
+          </td>
+
+          <td data-title="Price">
+            <input type="number" class="form-control input" name="item_price" value="{{item.item_price}}"
+              id="id_item_price" required="" placeholder="state a price">
+          </td>
+
+          <td data-title="Stock">
+            <input type="number" class="form-control input" min="-999" max="9999" value="{{item.item_stock}}"
+              name="item_stock" value="1" required="" id="id_item_stock" placeholder="">
+          </td>
+
+          <td data-title="Genre">
+            <select class="form-check" name="item_genre" id="id_item_genre">
+              <option value="{{item.item_genre}}" selected="">--------</option>
+              <option value="Paintings">Paintings</option>
+              <option value="Sculptures">Sculptures</option>
+              <option value="Nfts">Nfts</option>
+              <option value="Handcraft (Wood, Metal, etc)">Handcraft (Wood, Metal, etc)</option>
+              <option value="Other">Other</option>
+            </select>
+          </td>
+
+          <td data-title="Material">
+            <select class="form-check" name="item_material" id="id_item_material">
+              <option value="{{item.item_material}}" selected="">--------</option>
+              <option value="Digital Asset">Digital Asset</option>
+              <option value="Wood">Wood</option>
+              <option value="Stone">Stone</option>
+              <option value="Metal">Metal</option>
+              <option value="Canvas &amp; Paint">Canvas &amp; Paint</option>
+              <option value="Ceramics">Ceramics</option>
+              <option value="Clay">Clay</option>
+              <option value="Other">Other</option>
+            </select>
+          </td>
+
+          <td data-title="Update" data-type="currency">
+            <button type="submit" class="btn btn-primary button" value="Send">
+              <span>Update</span>
+            </button>
+          </td>
+
+        </tr>
+      </form>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

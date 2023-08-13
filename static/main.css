@@ -15332,6 +15332,283 @@ textarea.form-control-lg {
   border-style: none;
 }
 
+.container-items {
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 1080px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.container-items .list-container-textc {
+  width: 100%;
+  display: flex;
+  margin: 50px 0 0 0;
+}
+.container-items .list-container-textc .list-title-container {
+  width: 100%;
+  display: flex;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.container-items .list-container-textc .list-title-container p {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.container-items .accordion {
+  margin: 50px 0 0 0;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-btn-icon: none;
+  --bs-accordion-btn-icon-width: 0;
+  --bs-accordion-btn-focus-border-color: transparent;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem transparent;
+}
+.container-items .accordion .accordion-item {
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 2px;
+  border-radius: 0;
+}
+.container-items .accordion .accordion-item .accordion-header .accordion-button {
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.container-items .accordion .accordion-item .accordion-header .accordion-button p {
+  width: 100%;
+  margin: 0;
+  font-size: 1.5rem;
+}
+.container-items .accordion .accordion-item .accordion-header .accordion-button:hover {
+  background-color: rgba(207, 0, 114, 0.7);
+}
+.container-items .accordion .accordion-item .accordion-header .accordion-button:active {
+  background-color: rgba(207, 0, 114, 0.842);
+}
+.container-items .accordion .accordion-item .accordion-header .accordion-button:focus {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+  color: black;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body {
+  padding: 20px 0 0 0;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table {
+  width: 100%;
+  border-spacing: 0;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table thead {
+  position: relative;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table thead tr th {
+  background-color: rgba(207, 0, 114, 0.7);
+  border: 1px solid rgba(255, 36, 156, 0.7);
+  font-weight: normal;
+  text-align: center;
+  color: white;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table thead tr th:first-of-type {
+  text-align: center;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody {
+  padding: 0;
+  text-align: center;
+  white-space: normal;
+  color: white;
+  display: table-row-group;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody tr {
+  margin-bottom: 1em;
+  display: table-row;
+  border-width: 1px;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody tr:last-of-type {
+  margin-bottom: 0;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody tr:nth-of-type(even) {
+  background-color: rgba(37, 37, 37, 0.753);
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody th[scope=row] {
+  border-left: 1px solid rgba(255, 36, 156, 0.7);
+  border-bottom: 1px solid rgba(255, 36, 156, 0.7);
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody td {
+  border-left: 1px solid rgba(255, 36, 156, 0.7);
+  border-bottom: 1px solid rgba(255, 36, 156, 0.7);
+  text-align: center;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody td:last-of-type {
+  border-right: 1px solid rgba(255, 36, 156, 0.7);
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody td[data-type=currency] {
+  text-align: center;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody td[data-title]:before {
+  content: attr(data-title);
+  float: left;
+  font-size: 0.8em;
+  color: white;
+  content: none;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody .btn a {
+  text-decoration: none;
+  color: white;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tr {
+  padding: 0;
+  text-align: center;
+  white-space: normal;
+  color: white;
+  display: table-row;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table th {
+  text-align: center;
+  white-space: normal;
+  color: white;
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0.5em;
+}
+.container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table td {
+  text-align: center;
+  white-space: normal;
+  color: white;
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0.5em;
+}
+.container-items .buttonback-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px 0 0 0;
+  margin: 50px 0 0 0;
+}
+.container-items .buttonback-container .buttonback {
+  position: relative;
+  height: 40px;
+  width: 120px;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: transparent;
+  transition: all 0.5s;
+  border: none;
+}
+.container-items .buttonback-container .buttonback::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  z-index: 1;
+}
+.container-items .buttonback-container .buttonback:hover::before {
+  opacity: 0;
+  transform: scale(0.7, 0.7);
+}
+.container-items .buttonback-container .buttonback::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+  border: 1px solid #ffffff;
+  transform: scale(1.2, 1.2);
+  opacity: 0;
+  z-index: 1;
+  text-align: center;
+}
+.container-items .buttonback-container .buttonback:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+@media (max-width: 768px) {
+  .container-items .accordion .accordion-item .accordion-header .accordion-button p {
+    font-size: 1.3rem;
+  }
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table thead {
+    display: none;
+  }
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table th tr,
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody tr {
+    display: grid;
+    border-width: 0;
+  }
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table th tr th[scope=row],
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody tr th[scope=row] {
+    background-color: rgba(207, 0, 114, 0.7);
+  }
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table th tr td,
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody tr td {
+    text-align: right;
+    border-left: none;
+    border-bottom: none;
+    font-size: 0.8rem;
+  }
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table th tr td:last-of-type,
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody tr td:last-of-type {
+    border-right: none;
+  }
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table th tr td[data-type=currency],
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody tr td[data-type=currency] {
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table th tr td[data-title]:before,
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody tr td[data-title]:before {
+    content: attr(data-title);
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  .container-items {
+    width: 90%;
+    align-items: center;
+  }
+  .container-items .list-container-textc {
+    justify-content: center;
+    width: 90vw;
+  }
+  .container-items .list-container-textc .list-title-container {
+    justify-content: center;
+  }
+  .container-items .list-container-textc .list-title-container p {
+    font-size: 1.7rem;
+  }
+  .container-items .accordion {
+    width: 90vw;
+  }
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table th tr,
+  .container-items .accordion .accordion-item .accordion-collapse .accordion-body .responsive-table tbody tr {
+    display: grid;
+    border-width: 0;
+  }
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

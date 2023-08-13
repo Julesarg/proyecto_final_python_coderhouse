@@ -1,0 +1,49 @@
+{% extends 'admin_tools_father.html' %}
+{% load static %}
+{% block changeblock3 %}
+
+<div class="container">
+  <div class="admin-container-title">
+    <p class="admin-container-title_text">Edit User</p>
+  </div>
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th scope="col">Username</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <form action="" class="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <tr>
+          <th scope="row">
+            <input type="text" class="form-control input" id="username" value="{{user.username}}" name="username"
+              maxlength="25" required="" placeholder="username">
+          </th>
+          <td data-title="First Name">
+            <input type="text" class="form-control input" id="first_name" value="{{user.first_name}}" name="first_name"
+              maxlength="25" required="" placeholder="name">
+          </td>
+          <td data-title="Last Name">
+            <input type="text" class="form-control input" id="last_name" value="{{user.last_name}}" name="last_name"
+              maxlength="25" required="" placeholder="last name">
+          </td>
+          <td data-title="Email" data-type="currency">
+            <input type="email" class="form-control input" id="email" value="{{user.email}}" name="email" maxlength="25"
+              required="" placeholder="email">
+          </td>
+          <td data-title="Update" data-type="currency">
+            <button type="submit" class="btn btn-primary button" value="Send">
+              <span>Update</span>
+            </button>
+          </td>
+        </tr>
+      </form>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

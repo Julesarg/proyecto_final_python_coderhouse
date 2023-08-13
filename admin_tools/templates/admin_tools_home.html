@@ -1,19 +1,25 @@
 {% extends 'admin_tools_father.html' %}
 {% load static %}
 {% block changeblock3 %}
-<script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-<div class="add-container">
-  <div class="add-title-container">
-    <p class="add-title_text">Page under construction</p>
-    <lottie-player class="lootie" src="https://lottie.host/5679b926-3fb6-43b1-b6b8-da4f58a72531/UDKnDUZJxQ.json"
-      background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
-  </div>
-  <div class="buttonback-container">
-    <button class="buttonback" onclick="history.back()">
-      Back
-    </button>
-  </div>
-</div>
+<h1><a href="{% url 'users_home' %}">USERS</a></h1>
+<h1><a href="{% url 'items_home' %}">ITEMS</a></h1>
+
+<!-- <a class="btn btn-primary" href="#" role="button">Users</a>
+
+  <div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Items
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="{% url 'items_home' %}">ITEMS</a></li>
+      <li><a href="{% url 'items_home' %}">ITEMS2</a></li>
+      <li><a href="{% url 'items_home' %}">ITEMS3</a></li>
+      <li><a href="{% url 'items_home' %}">ITEMS4</a></li>
+      <li><a href="{% url 'items_home' %}">ITEMS5</a></li>
+    </ul>
+  </div> -->
+
+
 
 {% endblock %}
