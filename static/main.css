@@ -15332,6 +15332,61 @@ textarea.form-control-lg {
   border-style: none;
 }
 
+.container-items_adminpanel {
+  align-items: center;
+  min-height: 800px !important;
+}
+.container-items_adminpanel .options-container {
+  display: flex;
+  width: 50%;
+  height: auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.container-items_adminpanel .options-container .options-container_box {
+  display: flex;
+  height: auto;
+  padding: 10px 20px 10px 20px;
+  margin-top: 200px;
+  position: relative;
+  float: right;
+  border-radius: 5px;
+  background: linear-gradient(120deg, rgba(207, 0, 114, 0.7019607843) 30%, rgba(247, 90, 176, 0.7019607843) 38%, rgba(247, 90, 176, 0.7019607843) 40%, rgba(207, 0, 114, 0.7019607843) 48%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: brigthness1 2s infinite;
+  justify-content: center;
+  align-items: center;
+}
+.container-items_adminpanel .options-container .options-container_box .card_load_extreme_title_text {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 400;
+  margin: 0;
+}
+.container-items_adminpanel .options-container .options-container_box .card_load_extreme_title_text a {
+  color: rgb(230, 230, 230);
+  text-decoration: none;
+}
+
+@keyframes brigthness1 {
+  100% {
+    background-position: -100% 0;
+  }
+}
+@media (max-width: 576px) {
+  .container-items_adminpanel {
+    min-height: 100px !important;
+  }
+  .container-items_adminpanel .options-container {
+    flex-direction: column;
+    width: 40%;
+  }
+  .container-items_adminpanel .options-container .options-container_box {
+    padding: 10px 10px 10px 10px;
+    margin-top: 50px;
+  }
+}
 .container-items {
   width: 90%;
   height: -moz-fit-content;
