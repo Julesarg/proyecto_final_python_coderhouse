@@ -15664,6 +15664,67 @@ textarea.form-control-lg {
     border-width: 0;
   }
 }
+.container-items_adminpanel {
+  align-items: center;
+  min-height: 800px !important;
+}
+.container-items_adminpanel .admin-container-title {
+  width: 100%;
+  display: flex;
+  margin: 50px 0 0 0;
+}
+.container-items_adminpanel .admin-container-title .admin-container-title_text {
+  width: 100%;
+  display: flex;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.container-items_adminpanel .admin-container-title .admin-container-title_text p {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 576px) {
+  .container-items_adminpanel {
+    min-height: 500px !important;
+  }
+  .container-items_adminpanel .admin-container-title {
+    justify-content: center;
+  }
+  .container-items_adminpanel .admin-container-title .admin-container-title_text {
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+  }
+  .container-items_adminpanel .admin-container-title .admin-container-title_text p {
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  .edit_item {
+    margin: 50px 0 0 0 !important;
+  }
+  .edit_item form .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .edit_item form .buttons .button {
+    width: 80% !important;
+    margin-bottom: 20px;
+  }
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
